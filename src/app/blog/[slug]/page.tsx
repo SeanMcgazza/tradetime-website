@@ -496,6 +496,374 @@ const blogPosts: Record<string, BlogPost> = {
       <p>Good invoicing habits don't just speed up payment — they project professionalism that wins more work in the first place.</p>
     `,
   },
+  "best-job-management-apps-irish-plumbers-2026": {
+    title: "Best Job Management Apps for Irish Plumbers 2026",
+    description: "Compare the top job management apps for Irish plumbers in 2026. Features, pricing, mobile capabilities, and which app is right for your plumbing business.",
+    author: "TradeTime Team",
+    date: "January 2026",
+    readTime: "9 min read",
+    content: `
+      <p class="lead">Running a plumbing business in Ireland means juggling jobs, customers, invoices, and a van full of supplies — often while standing in someone's flooded kitchen. The right job management app can transform how you work. Here's our guide to the best options for Irish plumbers in 2026.</p>
+
+      <h2>Why Plumbers Need Job Management Software</h2>
+
+      <p>Paper diaries and mental notes don't scale. As your business grows, you need systems that handle:</p>
+
+      <ul>
+        <li><strong>Job scheduling:</strong> Know where you're supposed to be and when</li>
+        <li><strong>Customer records:</strong> Previous work, contact details, property notes</li>
+        <li><strong>Quoting and invoicing:</strong> Professional documents sent in seconds</li>
+        <li><strong>Payment tracking:</strong> Who owes you money at a glance</li>
+        <li><strong>Job history:</strong> What you did last time you were at Mrs Murphy's</li>
+      </ul>
+
+      <p>The best plumbers in Ireland aren't just skilled — they're organised. And organisation in 2026 means having the right app on your phone.</p>
+
+      <h2>What to Look For</h2>
+
+      <p>Not all job management apps suit plumbing businesses. Here's what matters:</p>
+
+      <h3>Mobile-First Design</h3>
+      <p>You're not behind a desk. The app needs to work brilliantly on your phone, even with wet hands or wearing gloves. If it's clunky on mobile, it's useless for plumbers.</p>
+
+      <h3>Offline Capability</h3>
+      <p>Basements and rural Irish properties don't always have signal. Good apps work offline and sync when you're back online.</p>
+
+      <h3>Irish VAT Support</h3>
+      <p>13.5% for services, 23% for goods sold separately, the two-thirds rule — your app should handle Irish tax without you thinking about it.</p>
+
+      <h3>Speed</h3>
+      <p>Creating a quote or invoice shouldn't take 10 minutes. The best apps let you complete common tasks in under 60 seconds.</p>
+
+      <h3>Integration with Accounting</h3>
+      <p>Does it connect with your accountant's software? Exporting to Xero, Sage, or CSV saves hours at tax time.</p>
+
+      <h2>Top Job Management Apps for Irish Plumbers</h2>
+
+      <h3>1. TradeTime</h3>
+      <p><strong>Best for:</strong> Irish sole traders and small plumbing businesses</p>
+
+      <p>TradeTime is built specifically for Irish tradespeople. It's not a generic business app adapted for Ireland — it was designed from the ground up for plumbers, electricians, and builders working here.</p>
+
+      <p><strong>Key features:</strong></p>
+      <ul>
+        <li>60-second invoices with Irish VAT built in</li>
+        <li>Job scheduling with customer history</li>
+        <li>Quote-to-invoice conversion</li>
+        <li>Payment tracking and reminders</li>
+        <li>Works offline</li>
+      </ul>
+
+      <p><strong>Pricing:</strong> Free tier available, Pro from €15/month</p>
+
+      <p><strong>Why plumbers love it:</strong> Speed. Most users create invoices in under a minute, right from their van. The Irish focus means no fiddling with currency, VAT rates, or irrelevant features.</p>
+
+      <h3>2. ServiceM8</h3>
+      <p><strong>Best for:</strong> Growing businesses needing advanced scheduling</p>
+
+      <p>Australian-made but works well in Ireland. Strong on job scheduling and dispatch — particularly good if you have multiple plumbers working for you.</p>
+
+      <p><strong>Key features:</strong></p>
+      <ul>
+        <li>Job dispatch and GPS tracking</li>
+        <li>Online booking for customers</li>
+        <li>Automated communications</li>
+        <li>Forms and checklists</li>
+      </ul>
+
+      <p><strong>Pricing:</strong> From €29/month</p>
+
+      <p><strong>Drawback:</strong> Not specifically designed for Irish tax requirements. You'll need to configure VAT settings manually.</p>
+
+      <h3>3. Jobber</h3>
+      <p><strong>Best for:</strong> Plumbing businesses with employees and complex scheduling</p>
+
+      <p>Canadian software with a strong following worldwide. Excellent for larger operations with multiple team members.</p>
+
+      <p><strong>Key features:</strong></p>
+      <ul>
+        <li>Client hub for customer self-service</li>
+        <li>Route optimisation</li>
+        <li>Team scheduling and time tracking</li>
+        <li>Automated follow-ups</li>
+      </ul>
+
+      <p><strong>Pricing:</strong> From €49/month (billed in USD)</p>
+
+      <p><strong>Drawback:</strong> Pricey for sole traders. Better suited to businesses with 3+ plumbers.</p>
+
+      <h3>4. Tradify</h3>
+      <p><strong>Best for:</strong> All-in-one job management with strong Xero integration</p>
+
+      <p>New Zealand-based app popular with UK and Irish trades. Good balance of features and usability.</p>
+
+      <p><strong>Key features:</strong></p>
+      <ul>
+        <li>Job tracking from enquiry to invoice</li>
+        <li>Purchase orders for suppliers</li>
+        <li>Xero and QuickBooks integration</li>
+        <li>Photo and note attachments</li>
+      </ul>
+
+      <p><strong>Pricing:</strong> From €35/month per user</p>
+
+      <p><strong>Drawback:</strong> Per-user pricing adds up quickly with a team.</p>
+
+      <h3>5. simPRO</h3>
+      <p><strong>Best for:</strong> Large plumbing contractors with complex operations</p>
+
+      <p>Enterprise-level software for bigger operations. Asset tracking, project management, inventory control — the works.</p>
+
+      <p><strong>Key features:</strong></p>
+      <ul>
+        <li>Full project management</li>
+        <li>Inventory and asset tracking</li>
+        <li>Detailed reporting and analytics</li>
+        <li>Multi-location support</li>
+      </ul>
+
+      <p><strong>Pricing:</strong> Custom pricing (typically €100+/month)</p>
+
+      <p><strong>Drawback:</strong> Overkill for small businesses. Implementation takes time.</p>
+
+      <h2>Quick Comparison Table</h2>
+
+      <p>Here's how the top apps stack up for Irish plumbers:</p>
+
+      <ul>
+        <li><strong>TradeTime:</strong> Best for sole traders, €0-15/month, Irish VAT built-in ✓</li>
+        <li><strong>ServiceM8:</strong> Best for growing teams, €29+/month, manual VAT setup</li>
+        <li><strong>Jobber:</strong> Best for larger businesses, €49+/month, manual VAT setup</li>
+        <li><strong>Tradify:</strong> Best for Xero users, €35+/user, manual VAT setup</li>
+        <li><strong>simPRO:</strong> Best for contractors, €100+/month, configurable</li>
+      </ul>
+
+      <h2>Features Plumbers Actually Need</h2>
+
+      <p>Don't pay for features you won't use. Most plumbers need:</p>
+
+      <ul>
+        <li><strong>Job diary:</strong> What's happening today, tomorrow, next week</li>
+        <li><strong>Customer database:</strong> Contact details, property notes, history</li>
+        <li><strong>Quoting:</strong> Professional quotes sent quickly</li>
+        <li><strong>Invoicing:</strong> Get paid without paperwork headaches</li>
+        <li><strong>Payment tracking:</strong> Know who owes what</li>
+      </ul>
+
+      <p>Nice-to-haves include GPS tracking, automated reminders, and online booking — but start with the basics.</p>
+
+      <h2>Making the Switch</h2>
+
+      <p>Worried about switching from paper or spreadsheets? Don't be. Modern apps are designed for easy onboarding:</p>
+
+      <ul>
+        <li><strong>Start fresh:</strong> You don't need to import old data. Add customers as you go.</li>
+        <li><strong>Use it daily:</strong> Force yourself to use the app for every job for two weeks. Habits form quickly.</li>
+        <li><strong>Start with invoicing:</strong> If you do nothing else, at least send invoices through the app. The rest follows.</li>
+      </ul>
+
+      <h2>The Bottom Line</h2>
+
+      <p>For most Irish plumbers — especially sole traders and small businesses — TradeTime offers the best combination of Irish-specific features, ease of use, and value. It's built for how you actually work.</p>
+
+      <p>If you're managing a team of plumbers and need advanced scheduling, ServiceM8 or Jobber might be worth the extra cost. And if you're running a large contracting business, simPRO has the depth you need.</p>
+
+      <p>Whatever you choose, any job management app beats a crumpled notebook. Your future self will thank you.</p>
+    `,
+  },
+  "track-expenses-self-employed-tradesperson-ireland": {
+    title: "How to Track Expenses as a Self-Employed Tradesperson in Ireland",
+    description: "Complete guide to tracking business expenses as a self-employed tradesperson in Ireland. What's deductible, how to keep records, and tools to make it easy.",
+    author: "TradeTime Team",
+    date: "January 2026",
+    readTime: "10 min read",
+    content: `
+      <p class="lead">Every euro you spend on your trade business that you don't track is potentially money lost at tax time. Yet most Irish tradespeople leave hundreds — sometimes thousands — of euros on the table each year because they don't track expenses properly. Here's how to fix that.</p>
+
+      <h2>Why Expense Tracking Matters</h2>
+
+      <p>As a self-employed tradesperson, you pay tax on your profits — that's income minus allowable expenses. The more legitimate business expenses you track, the less tax you pay.</p>
+
+      <p><strong>Example:</strong> You earn €60,000 in a year. If you track €15,000 in business expenses, you pay tax on €45,000. If you only track €10,000 (because you lost receipts), you pay tax on €50,000. At 40% marginal rate, that's €2,000 extra tax — just because of poor record-keeping.</p>
+
+      <h2>What Expenses Can You Claim?</h2>
+
+      <p>Here's what Irish tradespeople can typically deduct:</p>
+
+      <h3>Materials and Supplies</h3>
+      <ul>
+        <li>Pipes, fittings, cables, timber, plasterboard</li>
+        <li>Consumables: tape, screws, fixings, sealant</li>
+        <li>PPE: safety boots, gloves, hard hats, hi-vis</li>
+        <li>Workwear with your business logo</li>
+      </ul>
+
+      <h3>Tools and Equipment</h3>
+      <ul>
+        <li>Hand tools and power tools</li>
+        <li>Testing equipment (multimeters, pipe cameras, etc.)</li>
+        <li>Ladders, scaffolding, access equipment</li>
+        <li>Tool storage (boxes, bags, van racking)</li>
+      </ul>
+
+      <p><strong>Note:</strong> Items over €1,000 may need to be depreciated over several years rather than deducted immediately. Ask your accountant.</p>
+
+      <h3>Vehicle Costs</h3>
+      <p>Your van is probably your biggest expense. You can claim:</p>
+      <ul>
+        <li>Fuel for business journeys</li>
+        <li>Insurance (business portion)</li>
+        <li>Servicing and repairs</li>
+        <li>Tolls and parking</li>
+        <li>Van lease or purchase costs</li>
+      </ul>
+
+      <p><strong>Private use:</strong> If you use your van privately, you'll need to apportion expenses. A simple mileage log helps establish the business/private split.</p>
+
+      <h3>Running Costs</h3>
+      <ul>
+        <li>Phone bills (business portion)</li>
+        <li>Broadband</li>
+        <li>Software subscriptions (TradeTime, accounting software)</li>
+        <li>Trade association memberships</li>
+        <li>Professional certifications and training</li>
+      </ul>
+
+      <h3>Insurance</h3>
+      <ul>
+        <li>Public liability insurance</li>
+        <li>Professional indemnity</li>
+        <li>Employer's liability (if you have staff)</li>
+        <li>Tool and equipment insurance</li>
+      </ul>
+
+      <h3>Home Office</h3>
+      <p>If you do admin from home (quoting, invoicing, bookkeeping), you can claim a portion of:</p>
+      <ul>
+        <li>Heating and electricity</li>
+        <li>Broadband</li>
+        <li>Rent or mortgage interest (proportional to office space)</li>
+      </ul>
+
+      <p>Revenue accepts a simple calculation based on the number of rooms used for business.</p>
+
+      <h3>Professional Fees</h3>
+      <ul>
+        <li>Accountant fees</li>
+        <li>Legal fees (for business matters)</li>
+        <li>Bank charges on business account</li>
+        <li>Credit card processing fees</li>
+      </ul>
+
+      <h2>What You Can't Claim</h2>
+
+      <p>Not everything is deductible:</p>
+
+      <ul>
+        <li><strong>Personal expenses:</strong> Food (with some exceptions), regular clothing, personal phone use</li>
+        <li><strong>Fines and penalties:</strong> Parking tickets, speeding fines</li>
+        <li><strong>Personal portion:</strong> If something's used personally and for business, only the business portion is deductible</li>
+        <li><strong>Initial capital:</strong> Money you put into the business isn't an expense</li>
+      </ul>
+
+      <h2>How to Track Expenses</h2>
+
+      <p>The goal is simple: capture every business expense with proof, organised for easy retrieval.</p>
+
+      <h3>The Old Way (Don't Do This)</h3>
+      <p>Shoebox of receipts, sorted once a year in a panic before your accountant deadline. Receipts fade, get lost, or become unreadable. You miss deductions. Your accountant charges extra for the mess.</p>
+
+      <h3>The Better Way</h3>
+
+      <p><strong>1. Separate business and personal banking</strong></p>
+      <p>Open a dedicated business account. Every euro in and out is business-related. This alone simplifies tracking enormously.</p>
+
+      <p><strong>2. Photograph receipts immediately</strong></p>
+      <p>Thermal receipts fade. Paper gets wet in your van. The moment you get a receipt, photograph it with your phone. Many apps (including TradeTime) let you snap and categorise receipts on the spot.</p>
+
+      <p><strong>3. Use accounting software</strong></p>
+      <p>Apps like Xero, QuickBooks, or dedicated expense trackers connect to your bank account and categorise expenses automatically. You just need to review and approve.</p>
+
+      <p><strong>4. Weekly review</strong></p>
+      <p>Spend 15 minutes every Friday reviewing the week's expenses. Categorise anything missed, add notes where needed. This is much easier than doing a year's worth in January.</p>
+
+      <h2>Expense Categories for Tradespeople</h2>
+
+      <p>Set up these categories in your accounting software:</p>
+
+      <ul>
+        <li><strong>Materials:</strong> Items used on jobs</li>
+        <li><strong>Tools:</strong> Equipment purchases</li>
+        <li><strong>Vehicle — Fuel:</strong> Diesel/petrol</li>
+        <li><strong>Vehicle — Other:</strong> Insurance, repairs, tolls</li>
+        <li><strong>Phone & Internet:</strong> Communication costs</li>
+        <li><strong>Software:</strong> Subscriptions and apps</li>
+        <li><strong>Insurance:</strong> Business insurance</li>
+        <li><strong>Training:</strong> Courses and certifications</li>
+        <li><strong>Professional Fees:</strong> Accountant, legal</li>
+        <li><strong>Office:</strong> Home office and admin costs</li>
+        <li><strong>Marketing:</strong> Advertising, website, signage</li>
+      </ul>
+
+      <h2>Mileage Tracking</h2>
+
+      <p>If you don't want to track every fuel receipt, you can claim mileage instead. Revenue's civil service rates (2026) are:</p>
+
+      <ul>
+        <li><strong>Up to 1,500 km:</strong> 37.95 cent per km</li>
+        <li><strong>1,501 - 5,500 km:</strong> 70.00 cent per km</li>
+        <li><strong>5,501 - 25,000 km:</strong> 27.55 cent per km</li>
+        <li><strong>Over 25,000 km:</strong> 21.36 cent per km</li>
+      </ul>
+
+      <p>You'll need a mileage log: date, destination, purpose, kilometres. Apps can track this automatically using GPS.</p>
+
+      <h2>Record Keeping Requirements</h2>
+
+      <p>Revenue requires you to keep records for 6 years. This includes:</p>
+
+      <ul>
+        <li>All invoices (sales and purchases)</li>
+        <li>Receipts for expenses</li>
+        <li>Bank statements</li>
+        <li>Mileage logs</li>
+        <li>VAT records (if registered)</li>
+      </ul>
+
+      <p>Digital records are acceptable — you don't need to keep paper. A photo of a receipt stored in the cloud counts.</p>
+
+      <h2>Common Mistakes to Avoid</h2>
+
+      <ul>
+        <li><strong>Not keeping receipts:</strong> "I bought it" isn't proof. Keep the receipt.</li>
+        <li><strong>Mixing personal and business:</strong> That lunch wasn't a business meeting. Don't claim it.</li>
+        <li><strong>Missing the small stuff:</strong> €5 here, €10 there — it adds up to hundreds over a year.</li>
+        <li><strong>Forgetting cash purchases:</strong> Paid cash at the hardware shop? Still need to record it.</li>
+        <li><strong>Leaving it until year-end:</strong> By then you've forgotten half of what you spent.</li>
+      </ul>
+
+      <h2>Tools That Help</h2>
+
+      <ul>
+        <li><strong>TradeTime:</strong> Invoice and expense tracking built for Irish tradespeople</li>
+        <li><strong>Xero:</strong> Full accounting with receipt capture</li>
+        <li><strong>Dext (formerly ReceiptBank):</strong> Scan and categorise receipts automatically</li>
+        <li><strong>Revolut Business:</strong> Business banking with built-in expense categorisation</li>
+      </ul>
+
+      <h2>Getting Started Today</h2>
+
+      <p>You don't need a perfect system immediately. Start with these three steps:</p>
+
+      <ol>
+        <li><strong>Open a business bank account</strong> if you don't have one</li>
+        <li><strong>Download an expense app</strong> and photograph today's receipts</li>
+        <li><strong>Set a weekly reminder</strong> to review and categorise expenses</li>
+      </ol>
+
+      <p>Even imperfect tracking beats no tracking. Start today, improve over time, and watch your tax bill shrink.</p>
+    `,
+  },
 };
 
 interface BlogPost {

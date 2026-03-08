@@ -43,6 +43,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const blogPosts = [
+    'best-job-management-apps-irish-plumbers-2026',
+    'track-expenses-self-employed-tradesperson-ireland',
     'invoice-software-irish-tradespeople-guide',
     'how-to-quote-jobs-tradesperson-ireland',
     'vat-irish-tradespeople-guide',

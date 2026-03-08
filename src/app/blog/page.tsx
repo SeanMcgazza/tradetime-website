@@ -16,6 +16,22 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "best-job-management-apps-irish-plumbers-2026",
+    title: "Best Job Management Apps for Irish Plumbers 2026",
+    description: "Compare the top job management apps for Irish plumbers in 2026. Features, pricing, mobile capabilities, and which app is right for your plumbing business.",
+    date: "January 2026",
+    readTime: "9 min read",
+    category: "Tools & Apps",
+  },
+  {
+    slug: "track-expenses-self-employed-tradesperson-ireland",
+    title: "How to Track Expenses as a Self-Employed Tradesperson in Ireland",
+    description: "Complete guide to tracking business expenses as a self-employed tradesperson in Ireland. What's deductible, how to keep records, and tools to make it easy.",
+    date: "January 2026",
+    readTime: "10 min read",
+    category: "Tax & Compliance",
+  },
+  {
     slug: "invoice-software-irish-tradespeople-guide",
     title: "Invoice Software for Irish Tradespeople: Complete Guide",
     description: "Discover the best invoice software options for Irish tradespeople. Compare features, VAT compliance, pricing, and find the right solution for your trade business.",
