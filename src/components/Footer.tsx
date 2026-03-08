@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Clock, Mail, MapPin, Shield, Lock } from "lucide-react";
+import { Clock, Shield, Lock } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -85,26 +85,15 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Irish Pride */}
           <div>
-            <h3 className="font-semibold mb-4">Contact</h3>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-2 text-gray-400">
-                <Mail className="w-4 h-4" />
-                <a href="mailto:hello@tradetime.ie" className="hover:text-white transition-colors">
-                  hello@tradetime.ie
-                </a>
-              </li>
-              <li className="flex items-start gap-2 text-gray-400">
-                <MapPin className="w-4 h-4 mt-1" />
-                <span>Dublin, Ireland</span>
-              </li>
-            </ul>
-            <div className="mt-6">
-              <p className="text-sm text-gray-400">
-                🇮🇪 Proudly Irish
-              </p>
-            </div>
+            <h3 className="font-semibold mb-4">Made in Ireland</h3>
+            <p className="text-sm text-gray-400">
+              🇮🇪 Proudly Irish
+            </p>
+            <p className="text-sm text-gray-400 mt-2">
+              Built for Irish tradespeople, by Irish developers.
+            </p>
           </div>
         </div>
 

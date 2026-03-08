@@ -10,8 +10,8 @@ const contactMethods = [
     icon: Mail,
     title: "Email us",
     description: "We'll respond within 24 hours",
-    contact: "hello@tradetime.ie",
-    href: "mailto:hello@tradetime.ie",
+    contact: "Use the form below",
+    href: "#contact-form",
   },
   {
     icon: MessageSquare,
@@ -23,8 +23,8 @@ const contactMethods = [
   {
     icon: MapPin,
     title: "Location",
-    description: "Based in Dublin, Ireland",
-    contact: "Dublin, Ireland 🇮🇪",
+    description: "Made in Ireland",
+    contact: "Ireland 🇮🇪",
     href: null,
   },
 ];

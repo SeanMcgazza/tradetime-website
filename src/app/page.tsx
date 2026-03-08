@@ -5,18 +5,19 @@ import {
   Receipt,
   CreditCard,
   Users,
-  Search,
   Smartphone,
   ArrowRight,
   Check,
   Zap,
-  AlertCircle,
-  Calculator,
-  MessageSquare,
+  MapPin,
+  Car,
+  Bell,
+  TrendingUp,
+  Package,
   ChevronDown,
 } from "lucide-react";
 
-// Hero Section
+// Hero Section - Updated messaging: payment focus, not speed
 function Hero() {
   return (
     <section className="pt-24 md:pt-32 pb-16 md:pb-24 bg-gradient-to-b from-navy-50 to-white">
@@ -25,38 +26,42 @@ function Hero() {
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-medium mb-6">
               <span>🇮🇪</span>
-              <span>Built for Irish Tradespeople</span>
+              <span>Built for Irish & UK Tradespeople</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-900 mb-6 leading-tight">
-              Invoice clients in{" "}
-              <span className="text-orange-500">under a minute.</span>
+              Stop chasing invoices.{" "}
+              <span className="text-orange-500">Start getting paid.</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Professional invoicing built for Irish electricians, plumbers, and builders. 
-              VAT-compliant. Mobile-ready. Free to start.
+              TradeTime helps tradespeople quote on site, invoice in one tap, 
+              and get paid in days — not weeks. No accountant required. No chasing. No spreadsheets.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/signup" className="btn-primary text-lg px-8 py-4">
-                Create Your First Invoice
+                Start Free Trial — 14 Days Free
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link href="#how-it-works" className="btn-secondary text-lg px-8 py-4">
-                See How It Works
+              <Link href="/pricing" className="btn-secondary text-lg px-8 py-4">
+                See Pricing
               </Link>
             </div>
             <div className="flex items-center gap-6 mt-8 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <Check className="w-5 h-5 text-green-500" />
-                <span>Free to start</span>
+                <span>No credit card required</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check className="w-5 h-5 text-green-500" />
-                <span>No credit card required</span>
+                <span>Set up in 15 minutes</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="w-5 h-5 text-green-500" />
+                <span>Cancel anytime</span>
               </div>
             </div>
           </div>
           
-          {/* Phone Mockup */}
+          {/* Phone Mockup - Invoice with Pay Now button */}
           <div className="relative">
             <div className="bg-navy-900 rounded-[3rem] p-4 shadow-2xl max-w-sm mx-auto">
               <div className="bg-white rounded-[2.5rem] p-6 min-h-[500px]">
@@ -76,7 +81,7 @@ function Hero() {
                     </div>
                     <div className="text-right">
                       <p className="font-semibold text-navy-900">Invoice #001</p>
-                      <p className="text-gray-500 text-xs">15 Jan 2024</p>
+                      <p className="text-gray-500 text-xs">8 Mar 2026</p>
                     </div>
                   </div>
                   
@@ -96,13 +101,14 @@ function Hero() {
                   </div>
                 </div>
                 
-                <button className="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold mt-4 flex items-center justify-center gap-2">
-                  <FileText className="w-5 h-5" />
-                  Send Invoice
+                {/* Pay Now Button - THE key feature */}
+                <button className="w-full bg-green-500 text-white py-3 rounded-lg font-semibold mt-4 flex items-center justify-center gap-2">
+                  <CreditCard className="w-5 h-5" />
+                  Pay Now — Card or Apple Pay
                 </button>
                 
                 <p className="text-center text-xs text-gray-400 mt-3">
-                  Created in 47 seconds ⚡
+                  Customer pays in 30 seconds. You get paid tomorrow. ⚡
                 </p>
               </div>
             </div>
@@ -113,7 +119,7 @@ function Hero() {
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
                   <Check className="w-5 h-5 text-green-600" />
                 </div>
-                <span className="text-sm font-medium">VAT Calculated</span>
+                <span className="text-sm font-medium">Paid in 3 days avg</span>
               </div>
             </div>
             
@@ -122,7 +128,7 @@ function Hero() {
                 <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
                   <Zap className="w-5 h-5 text-blue-600" />
                 </div>
-                <span className="text-sm font-medium">47s average</span>
+                <span className="text-sm font-medium">No more chasing</span>
               </div>
             </div>
           </div>
@@ -132,178 +138,58 @@ function Hero() {
   );
 }
 
-// Pain Points Section
-function PainPoints() {
-  const problems = [
-    {
-      icon: Clock,
-      title: "Invoicing takes too long",
-      problem: "After a long day on site, the last thing you want is paperwork. Handwritten invoices eat into your evening.",
-      solution: "TradeTime: 60-second invoices from your phone",
-    },
-    {
-      icon: AlertCircle,
-      title: "Invoices look unprofessional",
-      problem: "Scribbled invoices don't inspire confidence. Customers question your professionalism.",
-      solution: "TradeTime: Clean, branded templates every time",
-    },
-    {
-      icon: Calculator,
-      title: "VAT is confusing",
-      problem: "Different rates for different services. Getting it wrong means trouble with Revenue.",
-      solution: "TradeTime: Automatic Irish VAT calculation",
-    },
-    {
-      icon: MessageSquare,
-      title: "Chasing payments is awkward",
-      problem: "Following up on unpaid invoices feels uncomfortable. Late payments hurt your cash flow.",
-      solution: "TradeTime: One-tap payment reminders",
-    },
+// Stats Bar - Social proof with real numbers
+function StatsBar() {
+  const stats = [
+    { value: "13.9 hrs", label: "Admin per week for the average tradesperson" },
+    { value: "82%", label: "of contractors wait 30+ days to be paid" },
+    { value: "3 days", label: "Average time to payment with Pay Now" },
+    { value: "20x ROI", label: "Return on TradeTime cost in year one" },
   ];
 
   return (
-    <section className="section-padding bg-white">
+    <section className="py-8 bg-navy-900">
       <div className="container-custom">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
-            Sound familiar?
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            You&apos;re great at your trade. Paperwork shouldn&apos;t slow you down.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-          {problems.map((item, index) => (
-            <div
-              key={index}
-              className="bg-gray-50 rounded-2xl p-6 lg:p-8 hover:shadow-lg transition-shadow"
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <item.icon className="w-6 h-6 text-red-600" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-navy-900 mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">{item.problem}</p>
-                  <div className="flex items-center gap-2 text-green-600 font-medium">
-                    <Check className="w-5 h-5" />
-                    <span>{item.solution}</span>
-                  </div>
-                </div>
-              </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <p className="text-2xl md:text-3xl font-bold text-orange-400 mb-1">
+                {stat.value}
+              </p>
+              <p className="text-xs md:text-sm text-gray-400">
+                {stat.label}
+              </p>
             </div>
           ))}
         </div>
+        <p className="text-center text-xs text-gray-500 mt-4">
+          Sources: Sage UK Trade Survey, Rabbet 2024, QuickBooks 2025
+        </p>
       </div>
     </section>
   );
 }
 
-// Features Section
-function Features() {
-  const features = [
-    {
-      icon: Zap,
-      title: "One-Tap Invoicing",
-      description: "Create invoices in under 60 seconds. Finish paperwork before you leave the job site.",
-      stat: "47 seconds average",
-    },
-    {
-      icon: Receipt,
-      title: "Irish VAT Built In",
-      description: "Automatic calculation at 23%, 13.5%, 9%, or 0%. Revenue-ready from day one.",
-      stat: "100% compliant",
-    },
-    {
-      icon: Users,
-      title: "Customer Database",
-      description: "Save customer details once. Two taps and they're pre-filled on future invoices.",
-      stat: "Save 5+ min/invoice",
-    },
-    {
-      icon: CreditCard,
-      title: "Payment Tracking",
-      description: "See who's paid and who owes you at a glance. No more digging through emails.",
-      stat: "Real-time status",
-    },
-    {
-      icon: FileText,
-      title: "PDF Export & Email",
-      description: "Send professional PDF invoices directly from the app. In their inbox in seconds.",
-      stat: "Instant delivery",
-    },
-    {
-      icon: Search,
-      title: "Invoice History",
-      description: "All invoices stored and searchable. Tax time? Pull up any invoice instantly.",
-      stat: "Never lose one",
-    },
-  ];
-
-  return (
-    <section className="section-padding bg-navy-900">
-      <div className="container-custom">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Everything you need. Nothing you don&apos;t.
-          </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            TradeTime does one thing—invoicing—and does it brilliantly.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-navy-800 rounded-2xl p-6 lg:p-8 hover:bg-navy-700 transition-colors"
-            >
-              <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center mb-4">
-                <feature.icon className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">
-                {feature.title}
-              </h3>
-              <p className="text-gray-400 mb-4">{feature.description}</p>
-              <p className="text-orange-400 font-medium text-sm">{feature.stat}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <Link href="/features" className="text-orange-400 hover:text-orange-300 font-medium inline-flex items-center gap-2">
-            See all features
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// How It Works Section
+// How It Works - Quote → Invoice → Dashboard flow
 function HowItWorks() {
   const steps = [
     {
       number: "1",
-      title: "Set Up Your Business",
-      description: "Enter your business details once. 2-3 minutes and you're done forever.",
-      time: "One time",
+      title: "Quote on Site",
+      description: "Build a professional quote from your phone before you leave the customer. Tap your saved rates, add materials, and send. Done in under 2 minutes.",
+      time: "Under 2 mins",
     },
     {
       number: "2",
-      title: "Add Your Customer",
-      description: "Enter their details or select from your saved customers list.",
+      title: "Invoice in One Tap",
+      description: "Job done? Convert your accepted quote to an invoice with one tap. Every invoice has a Pay Now button. Customer pays by card, Google Pay, or Apple Pay.",
       time: "30 seconds",
     },
     {
       number: "3",
-      title: "Create & Send",
-      description: "Add line items, VAT calculates automatically, hit send. Done.",
-      time: "60 seconds",
+      title: "Watch the Dashboard",
+      description: "Your payment dashboard shows every invoice: paid, pending, or overdue. Automatic reminders go out at day 7, 14, and 21. You don't lift a finger.",
+      time: "Zero effort",
     },
   ];
 
@@ -315,13 +201,13 @@ function HowItWorks() {
             How it works
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Three steps. Five minutes setup. Professional invoices for life.
+            Quote, invoice, get paid. That&apos;s it.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {steps.map((step, index) => (
-            <div key={index} className="text-center">
+            <div key={index} className="text-center relative">
               <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
                 {step.number}
               </div>
@@ -330,12 +216,6 @@ function HowItWorks() {
               </h3>
               <p className="text-gray-600 mb-4">{step.description}</p>
               <p className="text-sm text-orange-600 font-medium">{step.time}</p>
-              
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2">
-                  <ArrowRight className="w-6 h-6 text-gray-300" />
-                </div>
-              )}
             </div>
           ))}
         </div>
@@ -351,42 +231,245 @@ function HowItWorks() {
   );
 }
 
-// Pricing Section
-function Pricing() {
+// Feature Highlights - 4 highest-impact features
+function FeatureHighlights() {
+  const features = [
+    {
+      icon: CreditCard,
+      title: "Pay Now Button",
+      problem: "Customers forget to pay. Bank transfers require them to log in, find your IBAN, create a payee. Most leave it for tomorrow.",
+      outcome: "One tap. Customer pays by card on their phone. You get paid next day. No chasing, no awkward calls.",
+    },
+    {
+      icon: FileText,
+      title: "On-Site Quote Builder",
+      problem: "Slow quotes lose jobs. The first tradesperson to send a professional quote with clear pricing wins, every time.",
+      outcome: "Build and send a branded quote from your phone before you leave the customer's house. Takes under 2 minutes.",
+    },
+    {
+      icon: Bell,
+      title: "Automatic Reminders",
+      problem: "You feel uncomfortable chasing customers. So you don't. Invoices go unpaid for 60, 90 days.",
+      outcome: "Day 7, 14, 21 reminders go out automatically. Professional, firm, and you never have to send a single one.",
+    },
+    {
+      icon: TrendingUp,
+      title: "Profit Per Job",
+      problem: "You don't really know which jobs make money. You quote by feel. Some jobs lose money and you only find out months later.",
+      outcome: "See the real margin on every job the moment it closes. Know which customers, job types, and days are most profitable.",
+    },
+  ];
+
+  return (
+    <section className="section-padding bg-white">
+      <div className="container-custom">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
+            What TradeTime does
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Every feature solves a real problem you&apos;ve felt.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="bg-gray-50 rounded-2xl p-6 lg:p-8"
+            >
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-navy-900 pt-2">
+                  {feature.title}
+                </h3>
+              </div>
+              <div className="space-y-3">
+                <p className="text-gray-600">
+                  <span className="font-medium text-red-600">The problem:</span> {feature.problem}
+                </p>
+                <p className="text-gray-700">
+                  <span className="font-medium text-green-600">The outcome:</span> {feature.outcome}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// The Maths Section - ROI Calculator
+function TheMaths() {
+  return (
+    <section className="section-padding bg-navy-900">
+      <div className="container-custom">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+            The maths: what TradeTime is actually worth
+          </h2>
+          
+          <div className="bg-navy-800 rounded-2xl p-8 text-left space-y-4">
+            <p className="text-gray-300">
+              You do <span className="text-orange-400 font-semibold">40 jobs a year</span>. 
+              Average job value: <span className="text-orange-400 font-semibold">€2,500</span>.
+            </p>
+            <p className="text-gray-300">
+              Right now, you wait an average of <span className="text-red-400 font-semibold">45 days</span> to be paid.
+            </p>
+            <p className="text-gray-300">
+              With TradeTime&apos;s Pay Now button, you get paid in <span className="text-green-400 font-semibold">3 days</span>.
+            </p>
+            <p className="text-gray-300">
+              That&apos;s €2,500 sitting in someone else&apos;s bank account for <span className="text-orange-400 font-semibold">42 fewer days</span>. Per job.
+            </p>
+            <p className="text-gray-300">
+              Across 40 jobs: that&apos;s <span className="text-orange-400 font-semibold">€100,000 in annual revenue</span> that 
+              circulates through your business 42 days faster.
+            </p>
+            
+            <div className="border-t border-navy-700 pt-4 mt-6">
+              <p className="text-gray-300">
+                The mileage tracker alone logs an average of <span className="text-orange-400 font-semibold">30,000km/year</span> for 
+                a busy tradesperson. At €0.18/km, that&apos;s <span className="text-green-400 font-semibold">€5,400 in tax deductions</span>. 
+                Most forget to claim it.
+              </p>
+            </div>
+            
+            <div className="border-t border-navy-700 pt-4 mt-6">
+              <p className="text-xl text-white font-semibold">
+                TradeTime Pro costs €588/year.
+              </p>
+              <p className="text-gray-300 mt-2">
+                The ROI isn&apos;t a percentage. It&apos;s a multiple. Most TradeTime customers get back 
+                <span className="text-green-400 font-semibold"> more than 20x</span> what they spend.
+              </p>
+            </div>
+          </div>
+          
+          <Link href="/signup" className="btn-primary text-lg px-8 py-4 mt-8 inline-flex">
+            Start Getting Paid Faster
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// All Features Grid
+function AllFeatures() {
+  const features = [
+    { icon: CreditCard, title: "Pay Now Button", description: "Card, Google Pay, Apple Pay. Funds next day." },
+    { icon: FileText, title: "On-Site Quotes", description: "Build and send before you leave the job." },
+    { icon: Receipt, title: "One-Tap Invoicing", description: "Quote to invoice in one tap." },
+    { icon: Bell, title: "Auto Reminders", description: "Day 7, 14, 21 reminders sent for you." },
+    { icon: MapPin, title: "GPS Job Timer", description: "Starts when you arrive, stops when you leave." },
+    { icon: Car, title: "Mileage Tracker", description: "Auto-log travel for €5,400+ tax deductions." },
+    { icon: Package, title: "Materials Tracker", description: "Log on site, added to invoice automatically." },
+    { icon: Users, title: "Client Database", description: "Every customer, job, and invoice in one place." },
+    { icon: TrendingUp, title: "Profit Per Job", description: "See which jobs actually make money." },
+    { icon: Zap, title: "Service Reminders", description: "'Annual boiler service due' sent automatically." },
+    { icon: Receipt, title: "VAT Return Summary", description: "One-click export for Revenue's ROS system." },
+    { icon: FileText, title: "Annual Income Report", description: "PDF for your accountant. Done in 2 minutes." },
+  ];
+
+  return (
+    <section className="section-padding bg-gray-50">
+      <div className="container-custom">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
+            Everything you need to run your business
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Quote, invoice, track, report — all from your phone.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl p-4 md:p-6 hover:shadow-md transition-shadow"
+            >
+              <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mb-3">
+                <feature.icon className="w-5 h-5 text-orange-600" />
+              </div>
+              <h3 className="font-semibold text-navy-900 mb-1">
+                {feature.title}
+              </h3>
+              <p className="text-sm text-gray-600">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-8">
+          <Link href="/features" className="text-orange-500 hover:text-orange-600 font-medium inline-flex items-center gap-2">
+            See all features in detail
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Pricing Preview
+function PricingPreview() {
   const plans = [
     {
-      name: "Free",
-      price: "€0",
-      period: "forever",
-      description: "Perfect for getting started",
+      name: "Starter",
+      price: "€19",
+      period: "/month",
+      annual: "€190/year",
+      description: "For the sole trader who wants to get paid faster",
       features: [
-        "Up to 3 clients",
-        "5 invoices per month",
-        "Basic invoice templates",
-        "Irish VAT calculation",
-        "PDF export",
-        "Email support",
+        "Pay Now Button on every invoice",
+        "On-Site Quote Builder",
+        "Quote-to-Invoice in One Tap",
+        "Client Database",
+        "Payment Dashboard",
       ],
-      cta: "Start Free",
+      cta: "Start Free Trial",
       popular: false,
     },
     {
       name: "Pro",
-      price: "€15",
+      price: "€49",
       period: "/month",
-      description: "For growing trade businesses",
+      annual: "€490/year",
+      description: "Everything in Starter, plus tools to run your business properly",
       features: [
-        "Unlimited clients",
-        "Unlimited invoices",
-        "Custom branding & logo",
-        "Payment reminders",
-        "Invoice analytics",
-        "Priority support",
-        "Export for accountant",
-        "Recurring invoices",
+        "Everything in Starter, plus:",
+        "Automatic Payment Reminders",
+        "GPS Job Timer",
+        "Mileage Tracker (€5,400+ deductions)",
+        "Materials Tracker",
+        "VAT Return Summary",
+        "Profit Per Job",
       ],
-      cta: "Start 14-Day Trial",
+      cta: "Start Free Trial",
       popular: true,
+    },
+    {
+      name: "RetrofitSync",
+      price: "€149",
+      period: "/month",
+      annual: "€1,490/year",
+      description: "Everything in Pro, plus SEAI grant compliance",
+      features: [
+        "Everything in Pro, plus:",
+        "Eircode BER Lookup",
+        "Grant Evidence Vault",
+        "SEAI Declaration Auto-Fill",
+        "Grant Invoice Templates",
+      ],
+      cta: "Start Free Trial",
+      popular: false,
+      badge: "Launch Price",
     },
   ];
 
@@ -395,44 +478,57 @@ function Pricing() {
       <div className="container-custom">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
-            Simple, transparent pricing
+            Simple, honest pricing
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Start free, upgrade when you&apos;re ready. No hidden fees.
+            No hidden fees. No per-job charges. No surprises.
+          </p>
+          <p className="text-orange-600 font-medium mt-2">
+            Pay annually and get 2 months free
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`rounded-2xl p-8 ${
+              className={`rounded-2xl p-6 lg:p-8 ${
                 plan.popular
-                  ? "bg-navy-900 text-white ring-4 ring-orange-500"
+                  ? "bg-navy-900 text-white ring-4 ring-orange-500 scale-105"
                   : "bg-gray-50 text-navy-900"
               }`}
             >
-              {plan.popular && (
-                <div className="inline-block px-3 py-1 bg-orange-500 text-white text-sm font-medium rounded-full mb-4">
-                  Most Popular
-                </div>
-              )}
+              <div className="flex items-center gap-2 mb-2">
+                {plan.popular && (
+                  <span className="px-2 py-1 bg-orange-500 text-white text-xs font-medium rounded-full">
+                    Most Popular
+                  </span>
+                )}
+                {plan.badge && (
+                  <span className="px-2 py-1 bg-green-500 text-white text-xs font-medium rounded-full">
+                    {plan.badge}
+                  </span>
+                )}
+              </div>
               <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-              <div className="mb-4">
+              <div className="mb-1">
                 <span className="text-4xl font-bold">{plan.price}</span>
                 <span className={plan.popular ? "text-gray-300" : "text-gray-500"}>
                   {plan.period}
                 </span>
               </div>
+              <p className={`text-sm mb-4 ${plan.popular ? "text-gray-400" : "text-gray-500"}`}>
+                or {plan.annual} (save 2 months)
+              </p>
               <p className={`mb-6 ${plan.popular ? "text-gray-300" : "text-gray-600"}`}>
                 {plan.description}
               </p>
               
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-2 mb-6">
                 {plan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center gap-3">
-                    <Check className={`w-5 h-5 ${plan.popular ? "text-orange-400" : "text-green-500"}`} />
-                    <span className={plan.popular ? "text-gray-200" : "text-gray-700"}>
+                  <li key={featureIndex} className="flex items-start gap-2">
+                    <Check className={`w-5 h-5 flex-shrink-0 mt-0.5 ${plan.popular ? "text-orange-400" : "text-green-500"}`} />
+                    <span className={`text-sm ${plan.popular ? "text-gray-200" : "text-gray-700"}`}>
                       {feature}
                     </span>
                   </li>
@@ -453,33 +549,36 @@ function Pricing() {
           ))}
         </div>
 
-        <p className="text-center text-gray-500 mt-8">
-          All plans include Irish VAT compliance. Cancel anytime.
-        </p>
+        <div className="text-center mt-8">
+          <Link href="/pricing" className="text-orange-500 hover:text-orange-600 font-medium inline-flex items-center gap-2">
+            Compare plans in detail
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
       </div>
     </section>
   );
 }
 
-// Testimonials Section
+// Testimonials
 function Testimonials() {
   const testimonials = [
     {
-      quote: "I used to spend Sunday evenings doing invoices. Now I send them from the van before I leave the job. Genuinely changed how I run my business.",
-      name: "Mick O'Brien",
-      business: "O'Brien Electrical",
+      quote: "I used to spend Sunday evenings writing invoices. Now I send them from the driveway before I drive away. I got paid on Tuesday for a job I did on Monday.",
+      name: "Darren",
+      trade: "Electrician",
       location: "Cork",
     },
     {
-      quote: "Customers comment on how professional my invoices look now. Before, I was using Word templates that looked like they were from 1995.",
-      name: "Sarah Dunne",
-      business: "SD Plumbing & Heating",
+      quote: "The SEAI form used to take me the best part of an hour. TradeTime fills it in from my job notes. I just check it and upload. That's it.",
+      name: "Aisling",
+      trade: "Retrofit Contractor",
       location: "Dublin",
     },
     {
-      quote: "The VAT calculation alone is worth it. I was always second-guessing myself on the rates. Now it's automatic and I know it's right.",
-      name: "Paddy Fitzgerald",
-      business: "Fitzgerald Building Services",
+      quote: "I didn't realise I was leaving €4,000 a year on the table in mileage deductions. The tracker just runs in the background. It's free money I was ignoring.",
+      name: "Patrick",
+      trade: "Plumber",
       location: "Galway",
     },
   ];
@@ -492,7 +591,7 @@ function Testimonials() {
             Trusted by Irish tradespeople
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Join hundreds of electricians, plumbers, and builders who&apos;ve simplified their invoicing.
+            Join electricians, plumbers, and builders who&apos;ve simplified their business.
           </p>
         </div>
 
@@ -512,7 +611,7 @@ function Testimonials() {
               <p className="text-gray-700 mb-6 italic">&quot;{testimonial.quote}&quot;</p>
               <div>
                 <p className="font-semibold text-navy-900">{testimonial.name}</p>
-                <p className="text-gray-500 text-sm">{testimonial.business}, {testimonial.location}</p>
+                <p className="text-gray-500 text-sm">{testimonial.trade}, {testimonial.location}</p>
               </div>
             </div>
           ))}
@@ -526,28 +625,28 @@ function Testimonials() {
 function FAQ() {
   const faqs = [
     {
-      question: "Is TradeTime free?",
-      answer: "Yes, there's a free tier with up to 3 clients and 5 invoices per month. It's enough to try it properly. Paid plans start at €15/month for unlimited everything.",
+      question: "Do I need to know anything about software to use this?",
+      answer: "No. If you can send a WhatsApp, you can use TradeTime. The quote builder takes under 5 minutes to learn. Most customers send their first invoice on the day they sign up.",
     },
     {
-      question: "Do I need to be VAT registered?",
-      answer: "No. TradeTime works for both VAT-registered and non-VAT-registered businesses. If you're not registered, just leave that field blank.",
+      question: "What payment methods can my customers use?",
+      answer: "Visa, Mastercard, Google Pay, Apple Pay, and SEPA bank transfer. The Pay Now button handles all of it. Your customer taps, pays, and you get a notification. Funds arrive in your bank account the next business day.",
     },
     {
-      question: "Does it work offline?",
-      answer: "TradeTime works best with an internet connection. You can view previously loaded invoices offline, and changes sync when you reconnect.",
+      question: "How much does Stripe charge?",
+      answer: "Stripe charges a processing fee on card payments (currently 1.4% + €0.25 for European cards, 2.9% + €0.25 for non-European). This is separate from your TradeTime subscription. You can pass this fee to your customer or absorb it — your choice.",
     },
     {
-      question: "Is my data secure?",
-      answer: "Yes. All data is encrypted and stored on EU servers. We're GDPR compliant and your data is never sold to third parties.",
+      question: "Does it work in the UK as well as Ireland?",
+      answer: "Yes. TradeTime supports Irish VAT rates (23%, 13.5%, 0%) and UK VAT (20%, 5%, 0%). UK tradespeople get the full core platform. The RetrofitSync SEAI features are Ireland-specific.",
     },
     {
-      question: "Can I switch from Excel/Word?",
-      answer: "Absolutely. Most users switch in under 5 minutes. You add customers as you go—no complicated import needed.",
+      question: "I already use Xero/QuickBooks. Will TradeTime replace it?",
+      answer: "Not entirely, and we don't try to. TradeTime is your on-site tool — for quoting, invoicing, getting paid, and tracking jobs in the field. Xero and QuickBooks are accounting tools. The two work together. TradeTime exports to formats your accountant can use.",
     },
     {
-      question: "What Irish VAT rates are supported?",
-      answer: "All of them: 23% (standard), 13.5% (reduced for construction/RCT), 9% (hospitality), and 0% (zero-rated). Select the service type and it applies automatically.",
+      question: "Is my data safe?",
+      answer: "TradeTime uses Supabase for data storage, hosted on EU infrastructure (Ireland/EU region). Your data never leaves the EU. We are GDPR compliant and do not sell your data to third parties.",
     },
   ];
 
@@ -558,9 +657,6 @@ function FAQ() {
           <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
             Frequently asked questions
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Everything you need to know about TradeTime.
-          </p>
         </div>
 
         <div className="max-w-3xl mx-auto">
@@ -599,25 +695,24 @@ function FinalCTA() {
     <section className="section-padding bg-navy-900">
       <div className="container-custom text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-          Ready to invoice like a pro?
+          Ready to stop chasing invoices?
         </h2>
         <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-          Join hundreds of Irish tradespeople who&apos;ve ditched the paperwork. 
-          Free to start, no credit card required.
+          14-day free trial. No credit card. Set up in 15 minutes.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/signup" className="btn-primary text-lg px-8 py-4">
-            Create Your First Invoice
+            Start Free Trial
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
         <div className="flex items-center justify-center gap-6 mt-8 text-sm text-gray-400">
-          <span>✓ Free to start</span>
           <span>✓ No credit card required</span>
+          <span>✓ Set up in 15 minutes</span>
           <span>✓ Cancel anytime</span>
         </div>
         <p className="mt-8 text-gray-500">
-          🇮🇪 Built in Ireland, for Irish tradespeople
+          🇮🇪 Built in Ireland, for Irish & UK tradespeople
         </p>
       </div>
     </section>
@@ -628,10 +723,13 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <PainPoints />
-      <Features />
+      <StatsBar />
       <HowItWorks />
-      <Pricing />
+      <FeatureHighlights />
+      <TheMaths />
+      <AllFeatures />
+      <PricingPreview />
+      <Testimonials />
       <FAQ />
       <FinalCTA />
     </>
