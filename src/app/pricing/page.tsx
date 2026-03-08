@@ -208,7 +208,7 @@ export default function PricingPage() {
                 </p>
 
                 <Link
-                  href="/signup"
+                  href="https://app.tradetime.ie/signup"
                   className={`block text-center py-4 px-6 rounded-lg font-semibold transition-colors mb-6 ${
                     plan.popular
                       ? "bg-orange-500 text-white hover:bg-orange-600"
@@ -444,7 +444,7 @@ export default function PricingPage() {
             Join tradespeople across Ireland and the UK who&apos;ve simplified their business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/signup" className="btn-primary text-lg px-8 py-4">
+            <Link href="https://app.tradetime.ie/signup" className="btn-primary text-lg px-8 py-4">
               Start Your Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>

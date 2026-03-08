@@ -274,7 +274,7 @@ export default function ContactPage() {
               Log in to access the help centre, submit a support ticket, or chat with our team directly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/login" className="btn-secondary">
+              <Link href="https://app.tradetime.ie/login" className="btn-secondary">
                 Log in to your account
               </Link>
               <Link href="/help" className="btn-outline">
@@ -294,7 +294,7 @@ export default function ContactPage() {
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
             Join hundreds of Irish tradespeople who&apos;ve made the switch.
           </p>
-          <Link href="/signup" className="btn-primary text-lg px-8 py-4">
+          <Link href="https://app.tradetime.ie/signup" className="btn-primary text-lg px-8 py-4">
             Start Free Today
           </Link>
         </div>

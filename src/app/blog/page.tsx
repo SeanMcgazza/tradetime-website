@@ -126,7 +126,7 @@ export default function BlogIndex() {
             TradeTime is built specifically for Irish tradespeople. Create professional, VAT-compliant invoices in under 60 seconds.
           </p>
           <Link
-            href="/signup"
+            href="https://app.tradetime.ie/signup"
             className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors"
           >
             Join the Waitlist

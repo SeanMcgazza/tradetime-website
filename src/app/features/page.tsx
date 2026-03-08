@@ -191,7 +191,7 @@ export default function FeaturesPage() {
             TradeTime is built specifically for Irish tradespeople. Fast invoicing, 
             correct VAT, professional results. No bloat, no complexity.
           </p>
-          <Link href="/signup" className="btn-primary text-lg px-8 py-4">
+          <Link href="https://app.tradetime.ie/signup" className="btn-primary text-lg px-8 py-4">
             Start Free Trial
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
@@ -333,7 +333,7 @@ export default function FeaturesPage() {
             Start free today. Create your first invoice in under 5 minutes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/signup" className="btn-primary text-lg px-8 py-4">
+            <Link href="https://app.tradetime.ie/signup" className="btn-primary text-lg px-8 py-4">
               Create Your First Invoice
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>

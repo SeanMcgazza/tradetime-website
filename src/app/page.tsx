@@ -37,7 +37,7 @@ function Hero() {
               and get paid in days — not weeks. No accountant required. No chasing. No spreadsheets.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/signup" className="btn-primary text-lg px-8 py-4">
+              <Link href="https://app.tradetime.ie/signup" className="btn-primary text-lg px-8 py-4">
                 Start Free Trial — 14 Days Free
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
@@ -350,7 +350,7 @@ function TheMaths() {
             </div>
           </div>
           
-          <Link href="/signup" className="btn-primary text-lg px-8 py-4 mt-8 inline-flex">
+          <Link href="https://app.tradetime.ie/signup" className="btn-primary text-lg px-8 py-4 mt-8 inline-flex">
             Start Getting Paid Faster
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
@@ -536,7 +536,7 @@ function PricingPreview() {
               </ul>
               
               <Link
-                href="/signup"
+                href="https://app.tradetime.ie/signup"
                 className={`block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                   plan.popular
                     ? "bg-orange-500 text-white hover:bg-orange-600"
@@ -701,7 +701,7 @@ function FinalCTA() {
           14-day free trial. No credit card. Set up in 15 minutes.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/signup" className="btn-primary text-lg px-8 py-4">
+          <Link href="https://app.tradetime.ie/signup" className="btn-primary text-lg px-8 py-4">
             Start Free Trial
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>

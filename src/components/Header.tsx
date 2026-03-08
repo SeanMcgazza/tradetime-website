@@ -42,12 +42,12 @@ export function Header() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
             <Link
-              href="/login"
+              href="https://app.tradetime.ie/login"
               className="text-gray-600 hover:text-navy-900 font-medium transition-colors"
             >
               Log in
             </Link>
-            <Link href="/signup" className="btn-primary">
+            <Link href="https://app.tradetime.ie/signup" className="btn-primary">
               Start Free
             </Link>
           </div>
@@ -82,14 +82,14 @@ export function Header() {
               ))}
               <hr className="my-2" />
               <Link
-                href="/login"
+                href="https://app.tradetime.ie/login"
                 className="text-gray-600 hover:text-navy-900 font-medium transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Log in
               </Link>
               <Link
-                href="/signup"
+                href="https://app.tradetime.ie/signup"
                 className="btn-primary text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
