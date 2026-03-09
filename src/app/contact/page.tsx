@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Mail, MapPin, Clock, MessageSquare, Phone, Send, CheckCircle } from "lucide-react";
+import { Mail, MapPin, Clock, MessageSquare, Send, CheckCircle, AlertCircle } from "lucide-react";
 import type { FormEvent } from "react";
 
 const contactMethods = [
@@ -10,21 +10,21 @@ const contactMethods = [
     icon: Mail,
     title: "Email us",
     description: "We'll respond within 24 hours",
-    contact: "Use the form below",
-    href: "#contact-form",
+    contact: "support@tradetime.ie",
+    href: "mailto:support@tradetime.ie",
   },
   {
     icon: MessageSquare,
-    title: "Live chat",
-    description: "Mon-Fri, 9am-6pm Irish time",
-    contact: "Chat with us",
-    href: "#",
+    title: "Help Centre",
+    description: "Find answers to common questions",
+    contact: "Visit Help Centre",
+    href: "/help",
   },
   {
     icon: MapPin,
     title: "Location",
     description: "Made in Ireland",
-    contact: "Ireland 🇮🇪",
+    contact: "Dublin, Ireland 🇮🇪",
     href: null,
   },
 ];
@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     question: "Do you offer phone support?",
-    answer: "Currently we offer email and live chat support. If you need to talk through something complex, we can arrange a call.",
+    answer: "Currently we offer email support. If you need to talk through something complex, we can arrange a call.",
   },
   {
     question: "Can I request a feature?",
@@ -46,6 +46,7 @@ const faqs = [
 
 export default function ContactPage() {
   const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -56,11 +57,29 @@ export default function ContactPage() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setFormStatus("submitting");
+    setErrorMessage("");
     
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setFormStatus("success");
-    setFormData({ name: "", email: "", subject: "general", message: "" });
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message");
+      }
+
+      setFormStatus("success");
+      setFormData({ name: "", email: "", subject: "general", message: "" });
+    } catch (error) {
+      setFormStatus("error");
+      setErrorMessage(error instanceof Error ? error.message : "Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -94,12 +113,12 @@ export default function ContactPage() {
                 </h3>
                 <p className="text-sm text-gray-500 mb-2">{method.description}</p>
                 {method.href ? (
-                  <a
+                  <Link
                     href={method.href}
                     className="text-orange-500 hover:text-orange-600 font-medium"
                   >
                     {method.contact}
-                  </a>
+                  </Link>
                 ) : (
                   <p className="text-gray-700 font-medium">{method.contact}</p>
                 )}
@@ -110,7 +129,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form */}
-      <section className="section-padding bg-white">
+      <section id="contact-form" className="section-padding bg-white">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
             {/* Form */}
@@ -125,8 +144,11 @@ export default function ContactPage() {
                   <h3 className="text-xl font-semibold text-green-800 mb-2">
                     Message sent!
                   </h3>
-                  <p className="text-green-600">
+                  <p className="text-green-600 mb-2">
                     Thanks for reaching out. We&apos;ll get back to you within 24 hours.
+                  </p>
+                  <p className="text-green-600 text-sm">
+                    Check your email for a confirmation.
                   </p>
                   <button
                     onClick={() => setFormStatus("idle")}
@@ -137,6 +159,16 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {formStatus === "error" && (
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-start gap-3">
+                      <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="text-red-800 font-medium">Failed to send message</p>
+                        <p className="text-red-600 text-sm">{errorMessage}</p>
+                      </div>
+                    </div>
+                  )}
+
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -249,9 +281,6 @@ export default function ContactPage() {
                     <p className="text-gray-600 text-sm mb-2">
                       <strong>Email:</strong> 24/7 (response within 24h)
                     </p>
-                    <p className="text-gray-600 text-sm mb-2">
-                      <strong>Live chat:</strong> Mon-Fri, 9am-6pm Irish time
-                    </p>
                     <p className="text-gray-600 text-sm">
                       <strong>Pro users:</strong> Priority support, same-day response
                     </p>
@@ -271,7 +300,7 @@ export default function ContactPage() {
               Already a TradeTime user?
             </h2>
             <p className="text-gray-600 mb-6">
-              Log in to access the help centre, submit a support ticket, or chat with our team directly.
+              Log in to access the help centre, submit a support ticket, or browse our guides.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="https://app.tradetime.ie/login" className="btn-secondary">

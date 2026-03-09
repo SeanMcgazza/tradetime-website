@@ -5,6 +5,615 @@ import { notFound } from "next/navigation";
 
 // Blog post data
 const blogPosts: Record<string, BlogPost> = {
+  "track-mileage-tax-deductions-ireland": {
+    title: "How to Track Mileage for Tax Deductions in Ireland",
+    description: "Learn how Irish tradespeople can track mileage for tax deductions. Understand Revenue rules, allowable rates, and the best apps to log your business travel.",
+    author: "TradeTime Team",
+    date: "March 2025",
+    readTime: "7 min read",
+    content: `
+      <p class="lead">Every kilometre you drive for work is potentially money back in your pocket at tax time. Yet most Irish tradespeople don't track their mileage properly — leaving hundreds or even thousands of euros on the table each year.</p>
+
+      <p>This guide explains exactly how mileage deductions work for Irish tradespeople, what records you need to keep, and the easiest ways to track your business travel.</p>
+
+      <h2>How Mileage Deductions Work in Ireland</h2>
+
+      <p>When you use your own vehicle for business travel, you can claim a deduction against your taxable income. There are two methods:</p>
+
+      <h3>Method 1: Civil Service Mileage Rates</h3>
+      <p>You can claim a fixed rate per kilometre based on Revenue-approved civil service rates. For 2025, these are:</p>
+
+      <ul>
+        <li><strong>Up to 1,500 km:</strong> 37.95 cent per km</li>
+        <li><strong>1,501 – 5,500 km:</strong> 70.00 cent per km</li>
+        <li><strong>5,501 – 25,000 km:</strong> 27.55 cent per km</li>
+        <li><strong>Over 25,000 km:</strong> 21.36 cent per km</li>
+      </ul>
+
+      <p>This method is simpler — you just need to track kilometres driven. No need to keep fuel receipts or calculate depreciation.</p>
+
+      <h3>Method 2: Actual Costs</h3>
+      <p>Alternatively, you can claim a proportion of your actual vehicle costs based on business use. This includes:</p>
+
+      <ul>
+        <li>Fuel</li>
+        <li>Insurance</li>
+        <li>Road tax</li>
+        <li>Servicing and repairs</li>
+        <li>Depreciation or lease costs</li>
+        <li>Tolls and parking</li>
+      </ul>
+
+      <p>You'll need to calculate what percentage of your total driving is for business and apply that to your costs.</p>
+
+      <h2>Which Method Should You Use?</h2>
+
+      <p>For most tradespeople with a van, <strong>actual costs often work out better</strong> — especially if you're doing high mileage. But the civil service rates are simpler and require less record-keeping.</p>
+
+      <p>Run the numbers both ways (or ask your accountant) to see which gives you the bigger deduction.</p>
+
+      <h2>What Counts as Business Mileage?</h2>
+
+      <p>You can claim mileage for journeys that are <strong>wholly and exclusively for business purposes</strong>:</p>
+
+      <ul>
+        <li><strong>Travel to job sites:</strong> Customer locations, construction sites, properties you're working on</li>
+        <li><strong>Supplier trips:</strong> Picking up materials from Chadwicks, Screwfix, wholesalers</li>
+        <li><strong>Bank and post office:</strong> Business banking, posting quotes</li>
+        <li><strong>Meetings:</strong> Accountant visits, client consultations, quotes</li>
+        <li><strong>Training:</strong> Courses, certifications, trade events</li>
+      </ul>
+
+      <h3>What Doesn't Count</h3>
+
+      <ul>
+        <li><strong>Commuting:</strong> Travel from home to your regular place of work (if you have one)</li>
+        <li><strong>Personal errands:</strong> Stopping at the supermarket on the way home</li>
+        <li><strong>Private use:</strong> Weekend trips, family journeys</li>
+      </ul>
+
+      <p><strong>Good news for tradespeople:</strong> If you work from home and travel directly to job sites, that's business mileage — not commuting. This is a significant advantage over office-based workers.</p>
+
+      <h2>What Records Do You Need?</h2>
+
+      <p>Revenue requires you to maintain a <strong>mileage log</strong>. For each business journey, record:</p>
+
+      <ul>
+        <li><strong>Date:</strong> When the journey took place</li>
+        <li><strong>Starting point:</strong> Where you left from</li>
+        <li><strong>Destination:</strong> Where you went</li>
+        <li><strong>Purpose:</strong> Why the journey was necessary (e.g., "Job at 12 Main St" or "Collect materials from Chadwicks")</li>
+        <li><strong>Kilometres:</strong> Distance travelled</li>
+      </ul>
+
+      <p>Keep this log throughout the year. Don't try to reconstruct it from memory in January — Revenue won't accept that.</p>
+
+      <h2>The Easy Way: Mileage Tracking Apps</h2>
+
+      <p>Paper logbooks work but are tedious. Modern apps make tracking effortless:</p>
+
+      <h3>Automatic GPS Tracking</h3>
+      <p>Apps like MileIQ, Driversnote, or TradeTime's built-in tracker detect when you're driving and log journeys automatically. At the end of each day, you just swipe to mark trips as business or personal.</p>
+
+      <h3>What to Look For</h3>
+      <ul>
+        <li><strong>Automatic detection:</strong> Don't rely on remembering to start tracking</li>
+        <li><strong>Easy classification:</strong> One tap to mark business vs. personal</li>
+        <li><strong>Reports:</strong> Generate summaries for your accountant or Revenue</li>
+        <li><strong>Irish support:</strong> Rates and rules that apply here, not the US or UK</li>
+      </ul>
+
+      <h2>Calculating Your Deduction</h2>
+
+      <p>Let's work through an example:</p>
+
+      <p><strong>Scenario:</strong> You're a plumber who drives 25,000 km per year, of which 20,000 km is business travel.</p>
+
+      <h3>Using Civil Service Rates:</h3>
+      <ul>
+        <li>First 1,500 km: 1,500 × €0.3795 = €569</li>
+        <li>Next 4,000 km (1,501-5,500): 4,000 × €0.70 = €2,800</li>
+        <li>Next 14,500 km (5,501-20,000): 14,500 × €0.2755 = €3,995</li>
+        <li><strong>Total deduction: €7,364</strong></li>
+      </ul>
+
+      <p>At a 40% marginal tax rate, that's <strong>€2,946 back in your pocket</strong>.</p>
+
+      <h2>Common Mistakes to Avoid</h2>
+
+      <ul>
+        <li><strong>Not keeping records:</strong> "I drove about 15,000 business kilometres" isn't good enough. You need a log.</li>
+        <li><strong>Claiming personal travel:</strong> That weekend trip to Cork wasn't business, even if you met a potential client.</li>
+        <li><strong>Forgetting small trips:</strong> The quick run to the builder's merchant counts. Track everything.</li>
+        <li><strong>Double counting:</strong> If you claim mileage rates, you can't also claim fuel receipts for the same vehicle.</li>
+        <li><strong>Waiting until year-end:</strong> Start tracking now. Reconstructing a year of travel is impossible.</li>
+      </ul>
+
+      <h2>If You Have a Company Van</h2>
+
+      <p>If your business owns or leases the van (not you personally), mileage rates don't apply. Instead, the business claims actual costs as expenses. Keep all receipts for fuel, insurance, repairs, etc.</p>
+
+      <p>However, if you use a company van for personal travel, there may be a Benefit-in-Kind (BIK) tax implication. Talk to your accountant about this.</p>
+
+      <h2>Getting Started Today</h2>
+
+      <ol>
+        <li><strong>Download a mileage app</strong> — MileIQ, Driversnote, or TradeTime</li>
+        <li><strong>Enable automatic tracking</strong> so you don't forget</li>
+        <li><strong>Classify trips daily</strong> — takes 30 seconds</li>
+        <li><strong>Run a monthly report</strong> to see your accumulated deduction</li>
+      </ol>
+
+      <p>Every kilometre you don't track is money you're giving away. Start today, and your future self (and bank account) will thank you.</p>
+    `,
+  },
+  "vat-tradespeople-simple-guide-ireland": {
+    title: "VAT for Tradespeople: A Simple Guide",
+    description: "A plain-English guide to VAT for Irish tradespeople. Learn about 13.5% vs 23% rates, when to register, and how to stay compliant without the headaches.",
+    author: "TradeTime Team",
+    date: "March 2025",
+    readTime: "6 min read",
+    content: `
+      <p class="lead">VAT doesn't have to be complicated. If you're an Irish tradesperson — electrician, plumber, builder, carpenter — this guide cuts through the jargon and explains exactly what you need to know.</p>
+
+      <h2>The Basics: What Is VAT?</h2>
+
+      <p>VAT (Value Added Tax) is a tax on goods and services. As a tradesperson, you collect VAT from your customers on behalf of Revenue, then pay it over (minus the VAT you've paid on your own business purchases).</p>
+
+      <p>Think of yourself as a tax collector. The VAT isn't your money — it's Revenue's. You're just handling it temporarily.</p>
+
+      <h2>Do I Need to Register for VAT?</h2>
+
+      <p>You <strong>must</strong> register if your annual turnover exceeds:</p>
+
+      <ul>
+        <li><strong>€42,500</strong> for services (most trade work)</li>
+        <li><strong>€85,000</strong> for goods (if you're mainly selling products)</li>
+      </ul>
+
+      <p>These are the 2025 thresholds. If you're approaching them, register before you exceed — Revenue doesn't like late registrations.</p>
+
+      <h3>Should I Register Voluntarily?</h3>
+
+      <p>Even below the threshold, voluntary registration can make sense if:</p>
+
+      <ul>
+        <li>You buy a lot of materials (you can reclaim the VAT)</li>
+        <li>Your customers are businesses (they can reclaim VAT, so your prices don't really go up for them)</li>
+        <li>You want to appear more established and professional</li>
+      </ul>
+
+      <p>The downside? More paperwork, and residential customers effectively pay more (they can't reclaim VAT).</p>
+
+      <h2>The Two Rates You'll Use</h2>
+
+      <h3>13.5% — For Most Trade Work</h3>
+
+      <p>The reduced rate applies to construction services on buildings. This includes:</p>
+
+      <ul>
+        <li>Plumbing, electrical, heating installation</li>
+        <li>Building, renovating, extending</li>
+        <li>Plastering, painting, decorating</li>
+        <li>Roofing, tiling, flooring installation</li>
+        <li>Kitchen and bathroom fitting</li>
+        <li>Garden landscaping (when attached to a property)</li>
+      </ul>
+
+      <p><strong>The key:</strong> If you're working on "immovable property" (buildings, land), it's usually 13.5%.</p>
+
+      <h3>23% — For Goods and Other Services</h3>
+
+      <p>The standard rate applies to:</p>
+
+      <ul>
+        <li>Selling materials without fitting them</li>
+        <li>Equipment hire</li>
+        <li>Professional services (design, consulting)</li>
+        <li>Repairs to movable items (appliances, machinery)</li>
+      </ul>
+
+      <h2>The Two-Thirds Rule</h2>
+
+      <p>Here's where it gets slightly tricky. If you supply both materials and labour together, and the <strong>materials cost more than two-thirds</strong> of the total, you must charge 23% on everything.</p>
+
+      <p><strong>Example:</strong></p>
+      <ul>
+        <li>You install a boiler. The boiler costs €2,500, your labour is €600.</li>
+        <li>Materials (€2,500) are 81% of the total (€3,100) — that's more than two-thirds.</li>
+        <li>You charge 23% VAT on the entire €3,100.</li>
+      </ul>
+
+      <p><strong>Workaround:</strong> Issue two invoices — one for the boiler (23%) and one for installation (13.5%). More paperwork, but it can save your customer money.</p>
+
+      <h2>What Goes on a VAT Invoice?</h2>
+
+      <p>Your invoices must include:</p>
+
+      <ul>
+        <li>Your name/business name and address</li>
+        <li>Your VAT number (format: IE1234567X)</li>
+        <li>Customer's name and address</li>
+        <li>Invoice number (sequential)</li>
+        <li>Date</li>
+        <li>Description of work/goods</li>
+        <li>Amount before VAT</li>
+        <li>VAT rate applied</li>
+        <li>VAT amount</li>
+        <li>Total including VAT</li>
+      </ul>
+
+      <p>Good invoice software like TradeTime handles all of this automatically.</p>
+
+      <h2>VAT Returns: The Basics</h2>
+
+      <p>Most small businesses file VAT returns every two months (bi-monthly). Some file quarterly or annually — Revenue assigns your frequency based on your turnover.</p>
+
+      <p>On your return, you report:</p>
+      <ul>
+        <li><strong>Output VAT:</strong> VAT you collected from customers</li>
+        <li><strong>Input VAT:</strong> VAT you paid on business purchases</li>
+        <li><strong>Net amount:</strong> Output minus input — this is what you pay (or claim back)</li>
+      </ul>
+
+      <h3>Example:</h3>
+      <ul>
+        <li>You invoiced €10,000 + €1,350 VAT (13.5%) = €11,350</li>
+        <li>You spent €3,000 + €690 VAT on materials and expenses</li>
+        <li>You pay Revenue: €1,350 - €690 = €660</li>
+      </ul>
+
+      <h2>Keeping Records</h2>
+
+      <p>You must keep VAT records for <strong>6 years</strong>. This includes:</p>
+
+      <ul>
+        <li>All sales invoices you issued</li>
+        <li>All purchase invoices and receipts</li>
+        <li>Bank statements</li>
+        <li>VAT returns</li>
+      </ul>
+
+      <p>Digital records are fine — you don't need paper files. A photo of a receipt stored in the cloud counts.</p>
+
+      <h2>Common VAT Mistakes</h2>
+
+      <ul>
+        <li><strong>Wrong rate:</strong> Charging 23% when 13.5% applies (or vice versa)</li>
+        <li><strong>Missing invoice details:</strong> No VAT number or incomplete breakdown</li>
+        <li><strong>Forgetting the two-thirds rule:</strong> Results in under- or over-charging</li>
+        <li><strong>Late returns:</strong> Revenue charges interest and penalties</li>
+        <li><strong>Not claiming input VAT:</strong> You're entitled to reclaim VAT on business purchases — do it!</li>
+      </ul>
+
+      <h2>Using Software to Stay Compliant</h2>
+
+      <p>The easiest way to get VAT right is to use software designed for Irish tradespeople. TradeTime has Irish VAT rates built in — select your service type, and the correct rate applies automatically. No more googling "what VAT rate for bathroom tiling."</p>
+
+      <p>When it's time to file your return, the software generates a summary of your VAT collected and paid. Hand that to your accountant or enter it into ROS yourself.</p>
+
+      <h2>When to Talk to an Accountant</h2>
+
+      <p>This guide covers the basics, but talk to an accountant if:</p>
+
+      <ul>
+        <li>You're unsure whether to register voluntarily</li>
+        <li>You do a mix of work that spans different VAT rates</li>
+        <li>You work for other EU countries</li>
+        <li>You're dealing with RCT and VAT together</li>
+        <li>You've made a mistake and need to correct it</li>
+      </ul>
+
+      <p>A good accountant saves you more than they cost — especially with VAT.</p>
+    `,
+  },
+  "getting-paid-faster-invoice-tips-contractors": {
+    title: "Getting Paid Faster: Invoice Tips for Irish Contractors",
+    description: "Practical tips for Irish contractors to get paid on time. From invoice timing to payment terms, follow-ups, and dealing with slow-paying clients.",
+    author: "TradeTime Team",
+    date: "March 2025",
+    readTime: "6 min read",
+    content: `
+      <p class="lead">Waiting 60, 90, or even 120 days to get paid is all too common for Irish contractors. But it doesn't have to be this way. Here are proven tactics to speed up payments and protect your cash flow.</p>
+
+      <h2>Invoice the Same Day</h2>
+
+      <p>This is the single most important thing you can do. Studies show invoices sent on the day of completion get paid <strong>30% faster</strong> than those sent a week later.</p>
+
+      <p>Why? The customer remembers the work, sees the value fresh, and your invoice doesn't get buried in a pile. "Out of sight, out of mind" is real — don't let your invoice become invisible.</p>
+
+      <p><strong>Best practice:</strong> Send the invoice before you leave the site. With TradeTime, this takes 60 seconds on your phone.</p>
+
+      <h2>Set Clear Payment Terms</h2>
+
+      <p>If you don't specify when payment is due, customers assume they have unlimited time. State your terms clearly on every invoice:</p>
+
+      <ul>
+        <li><strong>"Payment due on receipt"</strong> — expected immediately</li>
+        <li><strong>"Due within 7 days"</strong> — standard for residential work</li>
+        <li><strong>"Net 14"</strong> — common for smaller commercial jobs</li>
+        <li><strong>"Net 30"</strong> — typical for larger commercial contracts</li>
+      </ul>
+
+      <p>Shorter terms mean faster payment. If a customer expects Net 30, make sure you've agreed to that <em>before</em> starting the work — not discovered it when chasing payment.</p>
+
+      <h2>Get Deposits Upfront</h2>
+
+      <p>For larger jobs, deposits are essential:</p>
+
+      <ul>
+        <li><strong>30-50% upfront</strong> for jobs over €1,000</li>
+        <li><strong>Material costs covered</strong> before ordering expensive items</li>
+        <li><strong>Stage payments</strong> for multi-week projects (e.g., 40% start, 40% mid-point, 20% completion)</li>
+      </ul>
+
+      <p>Deposits protect your cash flow and demonstrate customer commitment. Serious customers understand this; those who refuse might be trouble anyway.</p>
+
+      <h2>Make Payment Frictionless</h2>
+
+      <p>Remove every barrier to payment:</p>
+
+      <ul>
+        <li><strong>Multiple options:</strong> Bank transfer, card payment, even cash if needed</li>
+        <li><strong>Clear bank details:</strong> IBAN and BIC prominently displayed on every invoice</li>
+        <li><strong>Payment links:</strong> Include a "Pay Now" button that takes them straight to payment</li>
+        <li><strong>QR codes:</strong> Let customers scan and pay instantly on their phone</li>
+      </ul>
+
+      <p>The easier it is to pay, the faster people pay.</p>
+
+      <h2>Follow Up Systematically</h2>
+
+      <p>Most late payments aren't malicious — people forget, lose emails, or deprioritise invoices. A polite follow-up usually works:</p>
+
+      <h3>Day 3 overdue</h3>
+      <p>Quick, friendly nudge: "Hi [name], just checking you received my invoice for the work at [address]. Let me know if you have any questions."</p>
+
+      <h3>Day 7 overdue</h3>
+      <p>Phone call: "Following up on invoice #123 sent on [date]. The total is €X and it's now a week past due. Can we sort payment today?"</p>
+
+      <h3>Day 14 overdue</h3>
+      <p>Firmer email: "This is a reminder that invoice #123 for €X is now 14 days overdue. Please arrange payment within 7 days."</p>
+
+      <h3>Day 21+ overdue</h3>
+      <p>Formal notice: "Final notice before escalation. Invoice #123 for €X is now [X] days overdue. If payment isn't received within 7 days, we'll need to pursue further action."</p>
+
+      <p><strong>Automation helps:</strong> TradeTime can send follow-up reminders automatically, so you don't have to remember or feel awkward.</p>
+
+      <h2>Know Your Rights</h2>
+
+      <p>For business-to-business (B2B) transactions, EU late payment rules protect you:</p>
+
+      <ul>
+        <li><strong>Interest:</strong> You can charge 8% above the ECB rate on overdue amounts</li>
+        <li><strong>Compensation:</strong> You're entitled to €40 minimum for recovery costs</li>
+        <li><strong>Payment term limits:</strong> Maximum 60 days for business customers (30 days for public bodies)</li>
+      </ul>
+
+      <p>Include a statement on your invoices: "Late payments may incur interest and recovery costs in accordance with the Late Payment in Commercial Transactions Regulations."</p>
+
+      <h2>Deal with Repeat Offenders</h2>
+
+      <p>Some customers are always late. Options include:</p>
+
+      <ul>
+        <li><strong>Require payment upfront:</strong> "Based on previous experience, I require full payment before starting work"</li>
+        <li><strong>Cash on completion:</strong> No more invoicing — payment before you leave</li>
+        <li><strong>Adjust your pricing:</strong> Factor in the cost of chasing payment</li>
+        <li><strong>Fire them:</strong> Some customers aren't worth the hassle</li>
+      </ul>
+
+      <h2>Prevent Problems Before They Start</h2>
+
+      <ul>
+        <li><strong>Clear quotes:</strong> Agree price and payment terms before starting</li>
+        <li><strong>Written confirmation:</strong> Email summary of what was agreed</li>
+        <li><strong>Check creditworthiness:</strong> For large commercial jobs, do your homework on the client</li>
+        <li><strong>Trust your gut:</strong> If something feels off, ask for more upfront</li>
+      </ul>
+
+      <h2>Professional Invoices Help</h2>
+
+      <p>A professional invoice signals a professional business. It should include:</p>
+
+      <ul>
+        <li>Your business name, address, and contact details</li>
+        <li>Clear invoice number and date</li>
+        <li>Itemised breakdown of work</li>
+        <li>VAT details (if registered)</li>
+        <li>Payment terms and due date</li>
+        <li>Bank details or payment link</li>
+      </ul>
+
+      <p>Handwritten invoices and Word documents look amateur. Use proper invoice software — it pays for itself in faster payments.</p>
+
+      <h2>Action Steps</h2>
+
+      <ol>
+        <li><strong>Start invoicing on the day of completion</strong></li>
+        <li><strong>Add clear payment terms to every invoice</strong></li>
+        <li><strong>Set up automatic payment reminders</strong></li>
+        <li><strong>Require deposits on jobs over €1,000</strong></li>
+        <li><strong>Follow up promptly and consistently</strong></li>
+      </ol>
+
+      <p>Cash flow is the lifeblood of your business. Don't let it depend on customers remembering to pay. Take control, and watch your bank balance improve.</p>
+    `,
+  },
+  "seai-grants-contractors-ireland": {
+    title: "SEAI Grants: What Contractors Need to Know",
+    description: "Everything Irish contractors need to know about SEAI grants. How the schemes work, how to become a registered contractor, and how grants create opportunities for your trade business.",
+    author: "TradeTime Team",
+    date: "March 2025",
+    readTime: "8 min read",
+    content: `
+      <p class="lead">SEAI grants are putting billions into Irish homes — upgrading heating systems, insulation, and energy efficiency. For contractors who understand the system, this is one of the biggest opportunities in the Irish trades sector right now.</p>
+
+      <h2>What Is SEAI?</h2>
+
+      <p>The Sustainable Energy Authority of Ireland (SEAI) administers government grants for home energy upgrades. Homeowners can get significant funding towards work like:</p>
+
+      <ul>
+        <li>Heat pump installation</li>
+        <li>Insulation (attic, wall, floor)</li>
+        <li>Windows and doors</li>
+        <li>Solar panels (PV systems)</li>
+        <li>Heating controls</li>
+        <li>Deep retrofits</li>
+      </ul>
+
+      <p>For homeowners, grants cover 20-80% of costs depending on the measure. For contractors, this means customers can afford work they'd otherwise skip — and you're at the centre of making it happen.</p>
+
+      <h2>The Main SEAI Grant Schemes</h2>
+
+      <h3>Better Energy Homes Scheme</h3>
+      <p>The most common scheme for individual homeowners. Fixed grants for specific measures:</p>
+
+      <ul>
+        <li><strong>Attic insulation:</strong> Up to €1,500</li>
+        <li><strong>Cavity wall insulation:</strong> Up to €1,700</li>
+        <li><strong>External wall insulation:</strong> Up to €8,000</li>
+        <li><strong>Internal dry lining:</strong> Up to €4,500</li>
+        <li><strong>Heat pump systems:</strong> Up to €6,500</li>
+        <li><strong>Solar PV:</strong> Up to €2,100</li>
+        <li><strong>Heating controls:</strong> Up to €700</li>
+      </ul>
+
+      <p>Homeowners apply online, get approval, then hire a contractor. After the work is done and inspected, SEAI pays the grant.</p>
+
+      <h3>One Stop Shop Service</h3>
+      <p>For deeper retrofits, the One Stop Shop model covers everything from assessment to completion. Registered companies handle the entire process — BER assessments, design, project management, and installation.</p>
+
+      <p>Grants are higher (up to 50% of costs), but the work is typically managed through certified One Stop Shop providers rather than individual contractors.</p>
+
+      <h3>Warmer Homes Scheme</h3>
+      <p>Free upgrades for homeowners on certain welfare payments. The work is delivered through SEAI's appointed contractors, not the open market.</p>
+
+      <h3>Community Energy Grant</h3>
+      <p>Group schemes for communities upgrading together. Larger scale, often coordinated through energy agencies or community groups.</p>
+
+      <h2>How to Become an SEAI Registered Contractor</h2>
+
+      <p>To work on SEAI-funded projects, you need to be on their registered contractor list. Requirements vary by trade:</p>
+
+      <h3>For Heat Pump Installers</h3>
+      <ul>
+        <li>QQI Level 6 Heat Pump Systems certification (or equivalent)</li>
+        <li>Registered with RGII for gas works (if applicable)</li>
+        <li>Registered Electrical Contractor (RECI) if doing electrical work</li>
+        <li>Insurance: €1.3m minimum public liability</li>
+        <li>Tax compliance: current Tax Clearance Certificate</li>
+      </ul>
+
+      <h3>For Insulation Contractors</h3>
+      <ul>
+        <li>NSAI Agrément or NSAI certification for the insulation systems you install</li>
+        <li>Appropriate training certifications</li>
+        <li>Insurance and tax clearance as above</li>
+      </ul>
+
+      <h3>For Solar PV Installers</h3>
+      <ul>
+        <li>MCS certification (Microgeneration Certification Scheme) or equivalent</li>
+        <li>RECI registration for electrical work</li>
+        <li>Safe Electric registration</li>
+        <li>Insurance and tax clearance</li>
+      </ul>
+
+      <p><strong>Application process:</strong> Register through the SEAI contractor portal at <em>www.seai.ie</em>. You'll submit documentation proving qualifications, insurance, and tax compliance. Approval typically takes 2-4 weeks.</p>
+
+      <h2>Why Registration Matters</h2>
+
+      <p>Being an SEAI-registered contractor gives you access to a steady stream of customers who are actively seeking your services and have funding to pay for them.</p>
+
+      <ul>
+        <li><strong>Pre-qualified leads:</strong> Customers with approved grants need registered contractors</li>
+        <li><strong>Reduced price sensitivity:</strong> Grant funding means customers focus on quality, not just cheapest quote</li>
+        <li><strong>Growing market:</strong> Government targets mean demand will increase for years</li>
+        <li><strong>Credibility:</strong> SEAI registration signals quality and compliance</li>
+      </ul>
+
+      <h2>The Contractor's Role in the Process</h2>
+
+      <p>Here's how a typical SEAI grant job flows:</p>
+
+      <ol>
+        <li><strong>Customer applies:</strong> Homeowner applies online for their chosen measures</li>
+        <li><strong>SEAI approves:</strong> Grant approval letter issued (usually 2-4 weeks)</li>
+        <li><strong>Customer gets quotes:</strong> They contact registered contractors (including you)</li>
+        <li><strong>You quote the job:</strong> Full price shown, with grant contribution noted</li>
+        <li><strong>Work proceeds:</strong> You complete the installation to SEAI standards</li>
+        <li><strong>Declaration of works:</strong> You submit a signed declaration confirming completion</li>
+        <li><strong>Inspection (maybe):</strong> SEAI may inspect before payment</li>
+        <li><strong>Grant paid:</strong> SEAI pays the grant portion directly to the homeowner or contractor (depending on arrangement)</li>
+      </ol>
+
+      <h2>Getting Paid on SEAI Jobs</h2>
+
+      <p>There are two payment models:</p>
+
+      <h3>Customer Pays Full Amount, Claims Grant</h3>
+      <p>You invoice the customer for the full amount. They pay you, then SEAI reimburses the grant portion to them. Lower risk for you — full payment before you wait on SEAI.</p>
+
+      <h3>Grant Assigned to Contractor</h3>
+      <p>The customer can assign the grant payment directly to you. You invoice for the full amount minus the grant, and SEAI pays you the grant portion directly.</p>
+
+      <p>This is convenient for customers (they pay less upfront) but means you're waiting on SEAI payment — typically 4-6 weeks after inspection.</p>
+
+      <p><strong>Tip:</strong> Build SEAI processing time into your cash flow planning. Don't rely on grant payments to cover immediate costs.</p>
+
+      <h2>Compliance and Quality Requirements</h2>
+
+      <p>SEAI takes quality seriously. Inspections check:</p>
+
+      <ul>
+        <li>Work completed as per application</li>
+        <li>Materials meet specifications</li>
+        <li>Installation follows manufacturer guidelines and building regulations</li>
+        <li>Documentation complete (manuals, warranties, certifications)</li>
+        <li>Post-work BER shows expected improvement</li>
+      </ul>
+
+      <p>Failed inspections delay payment and can lead to removal from the contractor register. Get it right the first time.</p>
+
+      <h2>Marketing Your SEAI Registration</h2>
+
+      <p>Use your registration as a selling point:</p>
+
+      <ul>
+        <li><strong>Website:</strong> "SEAI Registered Contractor" badge prominently displayed</li>
+        <li><strong>Quotes:</strong> Show the grant value — "Heat pump installation: €12,000 (€6,500 SEAI grant = €5,500 you pay)"</li>
+        <li><strong>Social media:</strong> Before/after photos of grant-funded projects</li>
+        <li><strong>Local advertising:</strong> Many homeowners don't know grants exist — educate them</li>
+      </ul>
+
+      <h2>Opportunities by Trade</h2>
+
+      <h3>Plumbers / Heating Engineers</h3>
+      <p>Heat pumps are the biggest opportunity. Demand massively exceeds supply — if you're certified, you'll have more work than you can handle.</p>
+
+      <h3>Electricians</h3>
+      <p>Solar PV installations are booming. Heat pump electrical work is substantial too. RECI registration plus solar certification opens doors.</p>
+
+      <h3>Builders / General Contractors</h3>
+      <p>Deep retrofits through One Stop Shops involve significant building work. Partner with registered providers or get certified yourself.</p>
+
+      <h3>Insulation Contractors</h3>
+      <p>External wall insulation is particularly lucrative — high grant values mean bigger projects. NSAI certification is essential.</p>
+
+      <h2>Getting Started</h2>
+
+      <ol>
+        <li><strong>Check your qualifications:</strong> Do you meet the requirements for your trade?</li>
+        <li><strong>Get certified:</strong> If not, pursue the necessary training and certification</li>
+        <li><strong>Ensure compliance:</strong> Tax clearance, insurance, registration</li>
+        <li><strong>Apply to SEAI:</strong> Submit your contractor registration</li>
+        <li><strong>Market yourself:</strong> Let customers know you're SEAI registered</li>
+      </ol>
+
+      <p>The energy upgrade market in Ireland is only going to grow. Get registered now, and you'll be positioned to ride the wave for years to come.</p>
+    `,
+  },
   "invoice-software-irish-tradespeople-guide": {
     title: "Invoice Software for Irish Tradespeople: Complete Guide",
     description: "Discover the best invoice software options for Irish tradespeople. Compare features, VAT compliance, pricing, and find the right solution for your trade business.",

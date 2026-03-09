@@ -1,14 +1,26 @@
+'use client';
+
 import Link from "next/link";
+import { useState } from "react";
 import { Check, X, ArrowRight, ChevronDown, HelpCircle } from "lucide-react";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Pricing - TradeTime | Starter, Pro & RetrofitSync Plans",
-  description: "Simple, honest pricing for Irish & UK tradespeople. Starter €19/mo, Pro €49/mo, RetrofitSync €149/mo. Pay annually and get 2 months free. 14-day free trial.",
-};
+type PlanId = 'starter' | 'pro' | 'retrofit';
 
-const plans = [
+const plans: Array<{
+  id: PlanId;
+  name: string;
+  monthlyPrice: number;
+  annualPrice: number;
+  description: string;
+  includesText?: string;
+  features: Array<{ name: string; included: boolean }>;
+  cta: string;
+  popular: boolean;
+  badge?: string;
+  badgeNote?: string;
+}> = [
   {
+    id: "starter",
     name: "Starter",
     monthlyPrice: 19,
     annualPrice: 190,
@@ -31,10 +43,11 @@ const plans = [
       { name: "VAT Return Summary (ROS export)", included: false },
       { name: "Profit Per Job analytics", included: false },
     ],
-    cta: "Start Free Trial",
+    cta: "Select Starter",
     popular: false,
   },
   {
+    id: "pro",
     name: "Pro",
     monthlyPrice: 49,
     annualPrice: 490,
@@ -51,10 +64,11 @@ const plans = [
       { name: "Profit Per Job analytics", included: true },
       { name: "Priority support (same-day)", included: true },
     ],
-    cta: "Start Free Trial",
+    cta: "Select Pro",
     popular: true,
   },
   {
+    id: "retrofit",
     name: "RetrofitSync",
     monthlyPrice: 149,
     annualPrice: 1490,
@@ -67,7 +81,7 @@ const plans = [
       { name: "Grant Invoice Templates — SEAI-compliant format", included: true },
       { name: "BER Assessor Reminder — auto-chase post-works assessment", included: true },
     ],
-    cta: "Start Free Trial",
+    cta: "Select RetrofitSync",
     popular: false,
     badge: "Launch Price",
     badgeNote: "First 100 contractors — locked for life",
@@ -141,8 +155,17 @@ const comparisonFeatures = [
   { name: "Grant Invoice Templates", starter: false, pro: false, retrofit: true },
 ];
 
-// Client component for toggle would go here - for now showing both prices
 export default function PricingPage() {
+  const [selectedPlan, setSelectedPlan] = useState<PlanId | null>(null);
+
+  const handleSelectPlan = (planId: PlanId) => {
+    setSelectedPlan(planId);
+  };
+
+  const getSignupUrl = (planId: PlanId) => {
+    return `https://app.tradetime.ie/signup?plan=${planId}`;
+  };
+
   return (
     <>
       {/* Hero */}
@@ -167,96 +190,138 @@ export default function PricingPage() {
       <section className="py-8 md:py-12 bg-white">
         <div className="container-custom">
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-            {plans.map((plan, index) => (
-              <div
-                key={index}
-                className={`rounded-2xl p-6 lg:p-8 ${
-                  plan.popular
-                    ? "bg-navy-900 text-white ring-4 ring-orange-500 md:scale-105"
-                    : "bg-gray-50 text-navy-900"
-                }`}
-              >
-                {/* Badges */}
-                <div className="flex flex-wrap items-center gap-2 mb-3 min-h-[28px]">
-                  {plan.popular && (
-                    <span className="px-3 py-1 bg-orange-500 text-white text-xs font-medium rounded-full">
-                      Most Popular
-                    </span>
-                  )}
-                  {plan.badge && (
-                    <span className="px-3 py-1 bg-green-500 text-white text-xs font-medium rounded-full">
-                      {plan.badge}
-                    </span>
-                  )}
-                </div>
-                
-                <h2 className="text-2xl font-bold mb-2">{plan.name}</h2>
-                
-                {/* Pricing */}
-                <div className="mb-1">
-                  <span className="text-4xl font-bold">€{plan.monthlyPrice}</span>
-                  <span className={plan.popular ? "text-gray-300" : "text-gray-500"}>
-                    /month
-                  </span>
-                </div>
-                <p className={`text-sm mb-4 ${plan.popular ? "text-orange-300" : "text-orange-600"}`}>
-                  or €{plan.annualPrice}/year (save €{plan.monthlyPrice * 12 - plan.annualPrice})
-                </p>
-                
-                <p className={`mb-6 ${plan.popular ? "text-gray-300" : "text-gray-600"}`}>
-                  {plan.description}
-                </p>
-
-                <Link
-                  href="https://app.tradetime.ie/signup"
-                  className={`block text-center py-4 px-6 rounded-lg font-semibold transition-colors mb-6 ${
-                    plan.popular
-                      ? "bg-orange-500 text-white hover:bg-orange-600"
-                      : "bg-navy-900 text-white hover:bg-navy-800"
+            {plans.map((plan, index) => {
+              const isSelected = selectedPlan === plan.id;
+              
+              return (
+                <div
+                  key={index}
+                  onClick={() => handleSelectPlan(plan.id)}
+                  className={`rounded-2xl p-6 lg:p-8 cursor-pointer transition-all duration-200 ${
+                    isSelected
+                      ? "bg-blue-50 ring-4 ring-blue-500 md:scale-105"
+                      : plan.popular
+                      ? "bg-navy-900 text-white ring-4 ring-orange-500 md:scale-105 hover:ring-blue-400"
+                      : "bg-gray-50 text-navy-900 hover:ring-2 hover:ring-blue-300"
                   }`}
                 >
-                  {plan.cta}
-                </Link>
-
-                {/* Features */}
-                {plan.includesText && (
-                  <p className={`font-medium mb-3 ${plan.popular ? "text-orange-300" : "text-orange-600"}`}>
-                    {plan.includesText}
-                  </p>
-                )}
-                
-                <ul className="space-y-2">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start gap-2">
-                      {feature.included ? (
-                        <Check className={`w-5 h-5 flex-shrink-0 mt-0.5 ${plan.popular ? "text-orange-400" : "text-green-500"}`} />
-                      ) : (
-                        <X className={`w-5 h-5 flex-shrink-0 mt-0.5 ${plan.popular ? "text-gray-600" : "text-gray-300"}`} />
+                  {/* Selected indicator */}
+                  {isSelected && (
+                    <div className="flex items-center gap-2 mb-3 text-blue-600">
+                      <div className="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center">
+                        <Check className="w-3 h-3 text-white" />
+                      </div>
+                      <span className="text-sm font-medium">Selected</span>
+                    </div>
+                  )}
+                  
+                  {/* Badges */}
+                  {!isSelected && (
+                    <div className="flex flex-wrap items-center gap-2 mb-3 min-h-[28px]">
+                      {plan.popular && (
+                        <span className="px-3 py-1 bg-orange-500 text-white text-xs font-medium rounded-full">
+                          Most Popular
+                        </span>
                       )}
-                      <span className={`text-sm ${
-                        feature.included
-                          ? plan.popular ? "text-gray-200" : "text-gray-700"
-                          : plan.popular ? "text-gray-500" : "text-gray-400"
-                      }`}>
-                        {feature.name}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-                
-                {plan.badgeNote && (
-                  <p className={`text-xs mt-4 ${plan.popular ? "text-gray-400" : "text-gray-500"}`}>
-                    {plan.badgeNote}
+                      {plan.badge && (
+                        <span className="px-3 py-1 bg-green-500 text-white text-xs font-medium rounded-full">
+                          {plan.badge}
+                        </span>
+                      )}
+                    </div>
+                  )}
+                  
+                  <h2 className={`text-2xl font-bold mb-2 ${isSelected ? "text-navy-900" : ""}`}>
+                    {plan.name}
+                  </h2>
+                  
+                  {/* Pricing */}
+                  <div className="mb-1">
+                    <span className={`text-4xl font-bold ${isSelected ? "text-navy-900" : ""}`}>
+                      €{plan.monthlyPrice}
+                    </span>
+                    <span className={isSelected ? "text-gray-600" : plan.popular ? "text-gray-300" : "text-gray-500"}>
+                      /month
+                    </span>
+                  </div>
+                  <p className={`text-sm mb-4 ${isSelected ? "text-blue-600" : plan.popular ? "text-orange-300" : "text-orange-600"}`}>
+                    or €{plan.annualPrice}/year (save €{plan.monthlyPrice * 12 - plan.annualPrice})
                   </p>
-                )}
-              </div>
-            ))}
+                  
+                  <p className={`mb-6 ${isSelected ? "text-gray-600" : plan.popular ? "text-gray-300" : "text-gray-600"}`}>
+                    {plan.description}
+                  </p>
+
+                  {/* Select/Get Started Button */}
+                  <Link
+                    href={getSignupUrl(plan.id)}
+                    onClick={(e) => e.stopPropagation()}
+                    className={`block text-center py-4 px-6 rounded-lg font-semibold transition-colors mb-6 ${
+                      isSelected
+                        ? "bg-blue-600 text-white hover:bg-blue-700"
+                        : plan.popular
+                        ? "bg-orange-500 text-white hover:bg-orange-600"
+                        : "bg-navy-900 text-white hover:bg-navy-800"
+                    }`}
+                  >
+                    {isSelected ? "Get Started →" : plan.cta}
+                  </Link>
+
+                  {/* Features */}
+                  {plan.includesText && (
+                    <p className={`font-medium mb-3 ${isSelected ? "text-blue-600" : plan.popular ? "text-orange-300" : "text-orange-600"}`}>
+                      {plan.includesText}
+                    </p>
+                  )}
+                  
+                  <ul className="space-y-2">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start gap-2">
+                        {feature.included ? (
+                          <Check className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
+                            isSelected ? "text-blue-500" : plan.popular ? "text-orange-400" : "text-green-500"
+                          }`} />
+                        ) : (
+                          <X className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
+                            isSelected ? "text-gray-400" : plan.popular ? "text-gray-600" : "text-gray-300"
+                          }`} />
+                        )}
+                        <span className={`text-sm ${
+                          feature.included
+                            ? isSelected ? "text-gray-700" : plan.popular ? "text-gray-200" : "text-gray-700"
+                            : isSelected ? "text-gray-400" : plan.popular ? "text-gray-500" : "text-gray-400"
+                        }`}>
+                          {feature.name}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  {plan.badgeNote && (
+                    <p className={`text-xs mt-4 ${isSelected ? "text-gray-500" : plan.popular ? "text-gray-400" : "text-gray-500"}`}>
+                      {plan.badgeNote}
+                    </p>
+                  )}
+                </div>
+              );
+            })}
           </div>
 
           <div className="text-center mt-8">
             <p className="text-gray-500">
               All plans include 14-day free trial • No credit card required • Cancel anytime
             </p>
+            {selectedPlan && (
+              <div className="mt-4">
+                <Link
+                  href={getSignupUrl(selectedPlan)}
+                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/20"
+                >
+                  Continue with {plans.find(p => p.id === selectedPlan)?.name}
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -444,8 +509,11 @@ export default function PricingPage() {
             Join tradespeople across Ireland and the UK who&apos;ve simplified their business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://app.tradetime.ie/signup" className="btn-primary text-lg px-8 py-4">
-              Start Your Free Trial
+            <Link 
+              href={selectedPlan ? getSignupUrl(selectedPlan) : "https://app.tradetime.ie/signup?plan=pro"} 
+              className="btn-primary text-lg px-8 py-4"
+            >
+              {selectedPlan ? `Start with ${plans.find(p => p.id === selectedPlan)?.name}` : "Start Your Free Trial"}
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>

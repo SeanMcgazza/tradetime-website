@@ -16,6 +16,38 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "track-mileage-tax-deductions-ireland",
+    title: "How to Track Mileage for Tax Deductions in Ireland",
+    description: "Learn how Irish tradespeople can track mileage for tax deductions. Understand Revenue rules, allowable rates, and the best apps to log your business travel.",
+    date: "March 2025",
+    readTime: "7 min read",
+    category: "Tax & Compliance",
+  },
+  {
+    slug: "vat-tradespeople-simple-guide-ireland",
+    title: "VAT for Tradespeople: A Simple Guide",
+    description: "A plain-English guide to VAT for Irish tradespeople. Learn about 13.5% vs 23% rates, when to register, and how to stay compliant without the headaches.",
+    date: "March 2025",
+    readTime: "6 min read",
+    category: "Tax & Compliance",
+  },
+  {
+    slug: "getting-paid-faster-invoice-tips-contractors",
+    title: "Getting Paid Faster: Invoice Tips for Irish Contractors",
+    description: "Practical tips for Irish contractors to get paid on time. From invoice timing to payment terms, follow-ups, and dealing with slow-paying clients.",
+    date: "March 2025",
+    readTime: "6 min read",
+    category: "Invoicing",
+  },
+  {
+    slug: "seai-grants-contractors-ireland",
+    title: "SEAI Grants: What Contractors Need to Know",
+    description: "Everything Irish contractors need to know about SEAI grants. How the schemes work, how to become a registered contractor, and how grants create opportunities for your trade business.",
+    date: "March 2025",
+    readTime: "8 min read",
+    category: "Business Tips",
+  },
+  {
     slug: "best-job-management-apps-irish-plumbers-2026",
     title: "Best Job Management Apps for Irish Plumbers 2026",
     description: "Compare the top job management apps for Irish plumbers in 2026. Features, pricing, mobile capabilities, and which app is right for your plumbing business.",
