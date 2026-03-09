@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Only initialize Resend if API key is available
+const resend = process.env.RESEND_API_KEY 
+  ? new Resend(process.env.RESEND_API_KEY)
+  : null;
 
 const SUBJECT_LABELS: Record<string, string> = {
   general: "General Enquiry",
@@ -35,6 +38,16 @@ export async function POST(request: NextRequest) {
     }
 
     const subjectLabel = SUBJECT_LABELS[subject] || "Contact Form";
+
+    // Check if Resend is configured
+    if (!resend) {
+      console.log("Contact form submission (Resend not configured):", { name, email, subject, message });
+      return NextResponse.json({ 
+        success: true, 
+        demo: true,
+        message: "Form received (email sending not configured)" 
+      });
+    }
 
     // Send email to TradeTime support
     const { data, error } = await resend.emails.send({
