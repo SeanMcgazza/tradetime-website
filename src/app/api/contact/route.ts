@@ -1,9 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+import { createClient } from "@supabase/supabase-js";
 
 // Only initialize Resend if API key is available
 const resend = process.env.RESEND_API_KEY 
   ? new Resend(process.env.RESEND_API_KEY)
+  : null;
+
+// Supabase client for storing submissions
+const supabase = process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_KEY
+  ? createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY)
   : null;
 
 const SUBJECT_LABELS: Record<string, string> = {
@@ -38,6 +44,18 @@ export async function POST(request: NextRequest) {
     }
 
     const subjectLabel = SUBJECT_LABELS[subject] || "Contact Form";
+
+    // Store in Supabase for tracking
+    if (supabase) {
+      await supabase.from("contact_submissions").insert({
+        name,
+        email,
+        subject: subjectLabel,
+        message,
+        status: "new",
+        source: "website",
+      });
+    }
 
     // Check if Resend is configured
     if (!resend) {
